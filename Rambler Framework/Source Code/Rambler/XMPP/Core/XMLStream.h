@@ -6,7 +6,8 @@
  **********************************************************************************************************************/
 
 #import <Foundation/Foundation.h>
-#import <Rambler/JID.h>
+
+@class JID;
 
 @interface XMLStream : NSObject
 

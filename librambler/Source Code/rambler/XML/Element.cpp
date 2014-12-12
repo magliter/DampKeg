@@ -1,6 +1,6 @@
 /**********************************************************************************************************************
  * @file    Element.cpp
- * @date    2014-06-29
+ * @date    2014-12-12
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
  **********************************************************************************************************************/
@@ -15,25 +15,25 @@ namespace rambler { namespace XML {
 
     StrongPointer<Element> Element::createWithName(String name)
     {
-        return StrongPointer<Element>(new Element(name, nullptr, nullptr));
+        return makeStrongPointer<Element>(name, nullptr, nullptr);
     }
 
     StrongPointer<Element> Element::createWithName(String name, StrongPointer<Namespace const> defaultNamespace)
     {
-        return StrongPointer<Element>(new Element(name, nullptr, defaultNamespace));
+        return makeStrongPointer<Element>(name, nullptr, defaultNamespace);
     }
 
     StrongPointer<Element> Element::createWithNameAndNamespace(String name,
                                                             StrongPointer<Namespace const> xmlnamespace)
     {
-        return StrongPointer<Element>(new Element(name, xmlnamespace, nullptr));
+        return makeStrongPointer<Element>(name, xmlnamespace, nullptr);
     }
 
     StrongPointer<Element> Element::createWithNameAndNamespace(String name,
                                                                StrongPointer<Namespace const> xmlnamespace,
                                                                StrongPointer<Namespace const> defaultNamespace)
     {
-        return StrongPointer<Element>(new Element(name, xmlnamespace, defaultNamespace));
+        return makeStrongPointer<Element>(name, xmlnamespace, defaultNamespace);
     }
 
     Element::Element(String name,

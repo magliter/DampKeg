@@ -1,6 +1,6 @@
 /**********************************************************************************************************************
  * @file    types.hpp
- * @date    2014-06-25
+ * @date    2014-12-12
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
  **********************************************************************************************************************/
@@ -14,7 +14,7 @@
 #include <set>
 #include <vector>
 
-#include "integer_types.hpp"
+#include "IntegerTypes.hpp"
 #include "string_types.hpp"
 #include "pointer_types.hpp"
 

@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
-#include "rambler/base64.hpp"
+#include "rambler/base64/base64.hpp"
 
 using namespace rambler;
 

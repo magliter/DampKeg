@@ -1,6 +1,6 @@
 /**********************************************************************************************************************
  * @file    rambler/XMPP/Core/JID.hpp
- * @date    2014-06-20
+ * @date    2014-12-12
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
  **********************************************************************************************************************/
@@ -8,11 +8,14 @@
 #pragma once
 
 #include "rambler/rambler.hpp"
+#include <memory>
+#include <memory.h>
 
 namespace rambler { namespace XMPP { namespace Core {
 
     struct JID {
-        
+        JID(String localPart, String domainPart, String resourcePart);
+
         String const localPart;
         String const domainPart;
         String const resourcePart;
@@ -37,8 +40,6 @@ namespace rambler { namespace XMPP { namespace Core {
 
     private:
         static String generateDescription(String localPart, String domainPart, String resourcePart);
-
-        JID(String localPart, String domainPart, String resourcePart);
 
         static bool validateLocalPart(JID const jid);
         static bool validateDomainPart(JID const jid);

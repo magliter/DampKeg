@@ -1,6 +1,6 @@
 /**********************************************************************************************************************
  * @file    Element.hpp
- * @date    2014-06-25
+ * @date    2014-12-12
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
  **********************************************************************************************************************/
@@ -17,6 +17,8 @@ namespace rambler { namespace XML {
 
     class Element : public NamespaceableNode, public std::enable_shared_from_this<Element> {
     public:
+        Element(String name, StrongPointer<Namespace const> xmlnamespace, StrongPointer<Namespace const> defaultNamespace);
+        
         static Element NoElement;
 
         static StrongPointer<Element> createWithName(String name);
@@ -82,7 +84,6 @@ namespace rambler { namespace XML {
         bool operator != (Element const & other);
     private:
         Element();
-        Element(String name, StrongPointer<Namespace const> xmlnamespace, StrongPointer<Namespace const> defaultNamespace);
 
         StrongPointer<Namespace const> defaultNamespace = Namespace::DefaultNamespace();
         std::vector<StrongPointer<Namespace const>> namespaces;

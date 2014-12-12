@@ -1,6 +1,6 @@
 /**********************************************************************************************************************
  * @file    rambler/XMPP/Core/JID.cpp
- * @date    2014-06-20
+ * @date    2014-12-12
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
  **********************************************************************************************************************/
@@ -11,7 +11,7 @@ namespace rambler { namespace XMPP { namespace Core {
 
     StrongPointer<JID const> JID::createJIDWithComponents(String localPart, String domainPart, String resourcePart)
     {
-        auto aJID = StrongPointer<JID const>(new JID(localPart, domainPart, resourcePart));
+        auto aJID = makeStrongPointer<JID const>(localPart, domainPart, resourcePart);
 
         if (!aJID->isValid()) {
             return nullptr;

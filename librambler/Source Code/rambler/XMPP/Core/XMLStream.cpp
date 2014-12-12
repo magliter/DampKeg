@@ -100,7 +100,7 @@ namespace rambler { namespace XMPP { namespace Core {
 
     void XMLStream::restart()
     {
-        context = std::make_shared<Context>();
+        context = makeStrongPointer<Context>();
         parser = XMLStreamParser::CreateParser(shared_from_this());
 
         sendData(getStreamHeader());
@@ -404,7 +404,7 @@ namespace rambler { namespace XMPP { namespace Core {
         payload.push_back('\0');
         payload += password;
 
-        StrongPointer<XML::TextNode> textNode = std::make_shared<XML::TextNode>(base64::encode(payload));
+        StrongPointer<XML::TextNode> textNode = makeStrongPointer<XML::TextNode>(base64::encode(payload));
 
         authElement->addChild(textNode);
 

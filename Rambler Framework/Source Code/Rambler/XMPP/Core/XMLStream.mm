@@ -7,6 +7,7 @@
 
 #import "XMLStream.h"
 #include "rambler/XMPP/Core/XMLStream.hpp"
+#import "JID.h"
 
 using namespace rambler;
 
