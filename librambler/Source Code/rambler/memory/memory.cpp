@@ -8,11 +8,11 @@
 
 #include "memory.hpp"
 
-#include <cstdio>
 #include <cstdlib>
 
 #include <atomic>
 #include <mutex>
+#include <iostream>
 #include <unordered_map>
 
 #include "SafeInt3.hpp"
@@ -21,18 +21,10 @@ namespace rambler { namespace memory {
 
     class MemoryManager {
     public:
-        static void initialize() {
-            static bool initialized = false;
-            if (initialized) {
-                return;
-            }
-
-            memoryManager = new MemoryManager;
-            initialized = true;
-        }
-
         static void * allocate(UInt amount) {
-            puts("Allocating!");
+            if (!defaultMemoryManager) {
+                defaultMemoryManager = new MemoryManager;
+            }
 
             void * ptr = calloc(amount, 1);
 
@@ -40,9 +32,11 @@ namespace rambler { namespace memory {
                 return ptr;
             }
 
-            memoryManager->mutex.lock();
-            memoryManager->MemoryManager::referenceCount[ptr] = 1;
-            memoryManager->mutex.unlock();
+            defaultMemoryManager->mutex.lock();
+            defaultMemoryManager->MemoryManager::referenceCount[ptr] = 1;
+            defaultMemoryManager->mutex.unlock();
+
+            std::cout << "Allocated " << ptr << "!\n";
 
             return ptr;
         }
@@ -51,18 +45,19 @@ namespace rambler { namespace memory {
             /* NOTE: Replace lock/unlock with lock_shared/unlock_shared once shared_timed_mutex
              * becomes available.
              */
-            puts("Deallocating!");
 
-            memoryManager->mutex.lock();
+            std::cout << "Deallocating " << ptr << "!\n";
 
-            if (memoryManager->referenceCount.count(ptr) == 0) {
-                memoryManager->mutex.unlock();
+            defaultMemoryManager->mutex.lock();
+
+            if (defaultMemoryManager->referenceCount.count(ptr) == 0) {
+                defaultMemoryManager->mutex.unlock();
                 return; // Consider throwing an exception instead.
             }
 
-            memoryManager->MemoryManager::referenceCount.erase(ptr);
+            defaultMemoryManager->MemoryManager::referenceCount.erase(ptr);
 
-            memoryManager->mutex.unlock();
+            defaultMemoryManager->mutex.unlock();
 
             free(ptr);
         }
@@ -72,21 +67,21 @@ namespace rambler { namespace memory {
              * becomes available.
              */
 
-            puts("Releasing!");
+            std::cout << "Releasing " << ptr << "!\n";
 
-            memoryManager->mutex.lock();
+            defaultMemoryManager->mutex.lock();
 
-            if (memoryManager->referenceCount.count(ptr) == 0) {
-                memoryManager->mutex.unlock();
+            if (defaultMemoryManager->referenceCount.count(ptr) == 0) {
+                defaultMemoryManager->mutex.unlock();
                 return; // Consider throwing an exception instead.
             }
 
-            if (--memoryManager->referenceCount.at(ptr) == 0) {
-                memoryManager->mutex.unlock();
+            if (--defaultMemoryManager->referenceCount.at(ptr) == 0) {
+                defaultMemoryManager->mutex.unlock();
                 return deallocate(ptr);
             }
 
-            memoryManager->mutex.unlock();
+            defaultMemoryManager->mutex.unlock();
         }
 
         static void retain(void * ptr) {
@@ -94,37 +89,26 @@ namespace rambler { namespace memory {
              * becomes available.
              */
 
-            puts("Retaining!");
+            std::cout << "Retaining " << ptr << "!\n";
 
-            memoryManager->mutex.lock();
+            defaultMemoryManager->mutex.lock();
 
-            if (memoryManager->referenceCount.count(ptr) == 0) {
-                memoryManager->mutex.unlock();
+            if (defaultMemoryManager->referenceCount.count(ptr) == 0) {
+                defaultMemoryManager->mutex.unlock();
                 return; // Consider throwing an exception instead.
             }
 
-            ++memoryManager->referenceCount.at(ptr);
-            memoryManager->mutex.unlock();
+            ++defaultMemoryManager->referenceCount.at(ptr);
+            defaultMemoryManager->mutex.unlock();
         }
     private:
-        static MemoryManager * memoryManager;
+        static MemoryManager * defaultMemoryManager;
 
         std::unordered_map<void *, std::atomic<UInt>> referenceCount;
         std::mutex mutex; /* Use shared_timed_mutex when it becomes available. */
     };
 
-    MemoryManager * MemoryManager::memoryManager;
-
-    void initialize() {
-        static bool initialized = false;
-        if (initialized) {
-            return;
-        }
-
-        MemoryManager::initialize();
-
-        initialized = true;
-    }
+    MemoryManager * MemoryManager::defaultMemoryManager;
 
     void * allocate(UInt count, UInt size) {
         UInt amount;

@@ -47,8 +47,8 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
 
         xmlStream->setIQStanzaReceivedEventHandler([this](StrongPointer<XMLStream> xmlStream, StrongPointer<XML::Element> stanza) {
             auto typeAttribute = stanza->getAttribute("type");
-            auto IQType = typeAttribute.getValue();
-            auto uniqueID = typeAttribute.getValue();
+            auto IQType = typeAttribute->getValue();
+            auto uniqueID = typeAttribute->getValue();
 
             if (IQType == "get") {
 
@@ -91,7 +91,7 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
             std::vector<StrongPointer<XML::Element>> temp;
 
             auto typeAttribute = stanza->getAttribute("type");
-            auto messageType = typeAttribute.getValue();
+            auto messageType = typeAttribute->getValue();
 
             //Other valid types are groupchat, headline, normal, and error. Handling only for now chat for simplicity
             if (messageType == "chat") {
@@ -109,8 +109,8 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
                     String uniqueID;
                     String timestamp;
 
-                    sender    = JID::createJIDWithString(stanza->getAttribute("from").getValue());
-                    recipient = JID::createJIDWithString(stanza->getAttribute("to").getValue());
+                    sender    = JID::createJIDWithString(stanza->getAttribute("from")->getValue());
+                    recipient = JID::createJIDWithString(stanza->getAttribute("to")->getValue());
 
                     if (threadElement != nullptr) {
                         thread = threadElement->getTextContent();
@@ -122,7 +122,7 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
                     
                     body = bodyElement->getTextContent();
                     timestamp = timestamp::now();
-                    uniqueID = stanza->getAttribute("id").getValue();
+                    uniqueID = stanza->getAttribute("id")->getValue();
 
                     auto message = Message::createMessage(sender, recipient, thread, subject, body, timestamp, uniqueID);
 
@@ -134,10 +134,10 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
                 auto statusElement = stanza->getFirstElementByNamespace(ChatStates_Namesapce);
 
                 if (statusElement != nullptr) {
-                    std::cout << "\nRECEIVED CHAT STATE NOTIFICATION (sent to " << stanza->getAttribute("to").getValue() << ")\n";
-                    std::cout << "From: " << stanza->getAttribute("from").getValue() << std::endl;
+                    std::cout << "\nRECEIVED CHAT STATE NOTIFICATION (sent to " << stanza->getAttribute("to")->getValue() << ")\n";
+                    std::cout << "From: " << stanza->getAttribute("from")->getValue() << std::endl;
                     std::cout << "State: " << statusElement->getName() << std::endl;
-                    std::cout << "UniqueID: " << stanza->getAttribute("id").getValue() << std::endl;
+                    std::cout << "UniqueID: " << stanza->getAttribute("id")->getValue() << std::endl;
                     std::cout << "Time: " << timestamp::now();
                 }
             }
@@ -147,9 +147,11 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
                                                                 StrongPointer<XML::Element> stanza) {
             StrongPointer<Presence const> presence;
 
-            auto jid = JID::createBareJIDWithJID(JID::createJIDWithString(stanza->getAttribute("from").getValue()));
+            auto jid = JID::createBareJIDWithJID(JID::createJIDWithString(stanza->getAttribute("from")->getValue()));
             auto bareJID = JID::createBareJIDWithJID(jid);
-            auto type = stanza->getAttribute("type").getValue();
+            std::cout << stanza.get() << std::endl;
+            auto typeAttribute = stanza->getAttribute("type");
+            auto type = typeAttribute ? stanza->getAttribute("type")->getValue() : "";
             auto statusElement = stanza->getFirstElementByName("status");
 
             String message;
@@ -326,12 +328,12 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         StrongPointer<XML::TextNode> textContent;
 
         if (jid) {
-            presenceElement->addAttribute({"to", jid->description});
+            presenceElement->addAttribute("to", jid->description);
         }
 
         switch (presence->state) {
             case Presence::State::Unavailable:
-                presenceElement->addAttribute({"type", "unavailable"});
+                presenceElement->addAttribute("type", "unavailable");
                 break;
             case Presence::State::Available:
                 break;
@@ -398,9 +400,9 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         uniqueID_IQRequestType_map[uuid] = IQRequestType::RosterGet;
 
         auto iqElement = XML::Element::createWithName("iq");
-        iqElement->addAttribute({"from", xmlStream->getJID()->description});
-        iqElement->addAttribute({"type", "get"});
-        iqElement->addAttribute({"id", uuid});
+        iqElement->addAttribute("from", xmlStream->getJID()->description);
+        iqElement->addAttribute("type", "get");
+        iqElement->addAttribute("id", uuid);
         iqElement->addChild(XML::Element::createWithName("query", Jabber_IQ_Roster_Namespace));
 
         xmlStream->sendData(iqElement);
@@ -420,14 +422,14 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         iqElement->addChild(queryElement);
         queryElement->addChild(itemElement);
 
-        iqElement->addAttribute({"from", xmlStream->getJID()->description});
-        iqElement->addAttribute({"type", "set"});
-        iqElement->addAttribute({"id", uuid});
+        iqElement->addAttribute("from", xmlStream->getJID()->description);
+        iqElement->addAttribute("type", "set");
+        iqElement->addAttribute("id", uuid);
 
-        itemElement->addAttribute({"jid", item->jid->description});
+        itemElement->addAttribute("jid", item->jid->description);
 
         if (!item->name.empty()) {
-            itemElement->addAttribute({"name", item->name});
+            itemElement->addAttribute("name", item->name);
         }
 
         for (auto group : item->groups) {
@@ -454,12 +456,12 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         iqElement->addChild(queryElement);
         queryElement->addChild(itemElement);
 
-        iqElement->addAttribute({"from", xmlStream->getJID()->description});
-        iqElement->addAttribute({"type", "set"});
-        iqElement->addAttribute({"id", uuid});
+        iqElement->addAttribute("from", xmlStream->getJID()->description);
+        iqElement->addAttribute("type", "set");
+        iqElement->addAttribute("id", uuid);
 
-        itemElement->addAttribute({"jid", item->jid->description});
-        itemElement->addAttribute({"subscription", "remove"});
+        itemElement->addAttribute("jid", item->jid->description);
+        itemElement->addAttribute("subscription", "remove");
 
         uniqueID_IQRequestType_map[uuid] = IQRequestType::RosterSet;
         xmlStream->sendData(iqElement);
@@ -519,9 +521,9 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         auto bareJID = JID::createBareJIDWithJID(jid);
         auto uuid = uuid::generate();
         auto presenceElement = XML::Element::createWithName("presence");
-        presenceElement->addAttribute({"id", uuid});
-        presenceElement->addAttribute({"to", bareJID->description});
-        presenceElement->addAttribute({"type", "subscribed"});
+        presenceElement->addAttribute("id", uuid);
+        presenceElement->addAttribute("to", bareJID->description);
+        presenceElement->addAttribute("type", "subscribed");
 
         xmlStream->sendData(presenceElement);
     }
@@ -538,9 +540,9 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         auto bareJID = JID::createBareJIDWithJID(jid);
         auto uuid = uuid::generate();
         auto presenceElement = XML::Element::createWithName("presence");
-        presenceElement->addAttribute({"id", uuid});
-        presenceElement->addAttribute({"to", bareJID->description});
-        presenceElement->addAttribute({"type", "unsubscribed"});
+        presenceElement->addAttribute("id", uuid);
+        presenceElement->addAttribute("to", bareJID->description);
+        presenceElement->addAttribute("type", "unsubscribed");
 
         xmlStream->sendData(presenceElement);
     }
@@ -557,9 +559,9 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         auto bareJID = JID::createBareJIDWithJID(jid);
         auto uuid = uuid::generate();
         auto presenceElement = XML::Element::createWithName("presence");
-        presenceElement->addAttribute({"id", uuid});
-        presenceElement->addAttribute({"to", bareJID->description});
-        presenceElement->addAttribute({"type", "unsubscribed"});
+        presenceElement->addAttribute("id", uuid);
+        presenceElement->addAttribute("to", bareJID->description);
+        presenceElement->addAttribute("type", "unsubscribed");
 
         xmlStream->sendData(presenceElement);
     }
@@ -576,9 +578,9 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         auto bareJID = JID::createBareJIDWithJID(jid);
         auto uuid = uuid::generate();
         auto presenceElement = XML::Element::createWithName("presence");
-        presenceElement->addAttribute({"id", uuid});
-        presenceElement->addAttribute({"to", bareJID->description});
-        presenceElement->addAttribute({"type", "subscribe"});
+        presenceElement->addAttribute("id", uuid);
+        presenceElement->addAttribute("to", bareJID->description);
+        presenceElement->addAttribute("type", "subscribe");
         if (!message.empty()) {
             auto statusElement = XML::Element::createWithName("status");
             auto textNode = XML::TextNode::createWithContent(message);
@@ -602,9 +604,9 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         auto bareJID = JID::createBareJIDWithJID(jid);
         auto uuid = uuid::generate();
         auto presenceElement = XML::Element::createWithName("presence");
-        presenceElement->addAttribute({"id", uuid});
-        presenceElement->addAttribute({"to", bareJID->description});
-        presenceElement->addAttribute({"type", "unsubscribe"});
+        presenceElement->addAttribute("id", uuid);
+        presenceElement->addAttribute("to", bareJID->description);
+        presenceElement->addAttribute("type", "unsubscribe");
 
         xmlStream->sendData(presenceElement);
     }
@@ -768,14 +770,14 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
     void Client::handleIQStanzaReceivedEvent_ping(StrongPointer<XML::Element> const stanza)
     {
         std::cout << "\n[PING]\n";
-        std::cout << "From: " << stanza->getAttribute("from").getValue() << std::endl;
-        std::cout << "To: " << stanza->getAttribute("to").getValue() << std::endl;
+        std::cout << "From: " << stanza->getAttribute("from")->getValue() << std::endl;
+        std::cout << "To: " << stanza->getAttribute("to")->getValue() << std::endl;
 
         auto response = XML::Element::createWithName("iq");
-        response->addAttribute({"from", stanza->getAttribute("to").getValue()});
-        response->addAttribute({"to", stanza->getAttribute("from").getValue()});
-        response->addAttribute({"id", stanza->getAttribute("id").getValue()});
-        response->addAttribute({"type", "result"});
+        response->addAttribute("from", stanza->getAttribute("to")->getValue());
+        response->addAttribute("to", stanza->getAttribute("from")->getValue());
+        response->addAttribute("id", stanza->getAttribute("id")->getValue());
+        response->addAttribute("type", "result");
 
         std::cout << "\n[PONG]\n";
         xmlStream->sendData(response);
@@ -783,7 +785,7 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
 
     void Client::handleIQStanzaReceivedEvent_rosterPush(StrongPointer<XML::Element> const stanza)
     {
-        auto jid = JID::createJIDWithString(stanza->getAttribute("from").getValue());
+        auto jid = JID::createJIDWithString(stanza->getAttribute("from")->getValue());
         /* From RFC 6121, 2.1.6.
          * A receiving client MUST ignore the stanza unless it has no 'from' attribute (i.e., implicitly from
          * the bare JID of the user's account) or it has a 'from' attribute whose value matches the user's
@@ -809,7 +811,7 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
             std::cout << rosterItem->description();
             handleRosterItemReceivedEvent(rosterItem);
         } else {
-            handleRosterItemRemovedEvent(JID::createJIDWithString(itemElement->getAttribute("jid").getValue()));
+            handleRosterItemRemovedEvent(JID::createJIDWithString(itemElement->getAttribute("jid")->getValue()));
         }
 
     }
@@ -824,22 +826,22 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         auto nameAttribute = itemElement->getAttribute("name");
         auto groupElements = itemElement->getElementsByName("group");
 
-        auto jid = JID::createJIDWithString(jidAttribute.getValue());
+        auto jid = JID::createJIDWithString(jidAttribute->getValue());
         SubscriptionState subscription;
-        if (subscriptionAttribute.getValue() == "none") {
+        if (subscriptionAttribute->getValue() == "none") {
             subscription = SubscriptionState::None;
-        } else if (subscriptionAttribute.getValue() == "to") {
+        } else if (subscriptionAttribute->getValue() == "to") {
             subscription = SubscriptionState::To;
-        } else if (subscriptionAttribute.getValue() == "from") {
+        } else if (subscriptionAttribute->getValue() == "from") {
             subscription = SubscriptionState::From;
-        } else if (subscriptionAttribute.getValue() == "both") {
+        } else if (subscriptionAttribute->getValue() == "both") {
             subscription = SubscriptionState::Both;
         } else {
             //error
             return nullptr;
         }
 
-        auto name = nameAttribute.getValue();
+        auto name = nameAttribute->getValue();
 
         std::vector<String const> groups;
         for (auto groupElement : groupElements) {

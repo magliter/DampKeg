@@ -31,7 +31,7 @@ class ConversationWindowController : NSWindowController {
     }
 
     func displayMessage(message: Message?) {
-        if !message {
+        if message == nil {
             return
         }
         messages = "\(messages!)\(message!.sender.bareJID.description): \(message!.body)\n"

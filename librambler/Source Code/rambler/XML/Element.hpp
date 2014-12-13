@@ -19,8 +19,6 @@ namespace rambler { namespace XML {
     public:
         Element(String name, StrongPointer<Namespace const> xmlnamespace, StrongPointer<Namespace const> defaultNamespace);
         
-        static Element NoElement;
-
         static StrongPointer<Element> createWithName(String name);
         static StrongPointer<Element> createWithName(String name, StrongPointer<Namespace const> defaultNamespace);
         static StrongPointer<Element> createWithNameAndNamespace(String name,
@@ -64,14 +62,20 @@ namespace rambler { namespace XML {
         StrongPointer<Namespace const> getNamespaceByPrefix(String prefix) const;
 
 
-        void addAttribute(Attribute attribute);
-        void addAttributes(std::set<Attribute> attributes);
+        void addAttribute(StrongPointer<Attribute const> attribute);
 
-        Attribute getAttribute(String name) const;
-        Attribute getAttribute(StrongPointer<Namespace const> xmlnamespace, String name) const;
-        std::set<Attribute> getAttributes() const;
+        template<typename... Args>
+        void addAttribute(Args... args) {
+            addAttribute(Attribute::create(args...));
+        }
 
-        void setAttributes(std::set<Attribute> attributes);
+        void addAttributes(std::set<StrongPointer<Attribute const>> attributes);
+
+        StrongPointer<Attribute const> getAttribute(String name) const;
+        StrongPointer<Attribute const> getAttribute(StrongPointer<Namespace const> xmlnamespace, String name) const;
+        std::set<StrongPointer<Attribute const>> getAttributes() const;
+
+        void setAttributes(std::set<StrongPointer<Attribute const>> attributes);
 
         void removeAttribute(String name);
         void removeAttribute(StrongPointer<Namespace const> xmlnamespace, String name);
@@ -87,7 +91,7 @@ namespace rambler { namespace XML {
 
         StrongPointer<Namespace const> defaultNamespace = Namespace::DefaultNamespace();
         std::vector<StrongPointer<Namespace const>> namespaces;
-        std::set<Attribute> attributes;
+        std::set<StrongPointer<Attribute const>> attributes;
 
         WeakPointer<Element> parent;
         std::vector<StrongPointer<Node>> children;

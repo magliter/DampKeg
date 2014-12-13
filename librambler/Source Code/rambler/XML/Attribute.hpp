@@ -13,7 +13,10 @@ namespace rambler { namespace XML {
 
     class Attribute : public NamespaceableNode {
     public:
-        static Attribute NoAttribute;
+        template<typename... Args>
+        static StrongPointer<Attribute const> create(Args... args) {
+            return makeStrongPointer<Attribute const>(args...);
+        }
 
         Attribute();
         Attribute(String name, String value);
@@ -33,5 +36,9 @@ namespace rambler { namespace XML {
     private:
         String const value;
     };
+
+    bool operator <  (StrongPointer<Attribute const> a, StrongPointer<Attribute const> b);
+    bool operator == (StrongPointer<Attribute const> a, StrongPointer<Attribute const> b);
+    bool operator != (StrongPointer<Attribute const> a, StrongPointer<Attribute const> b);
 
 }}

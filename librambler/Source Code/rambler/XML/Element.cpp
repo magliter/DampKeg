@@ -11,8 +11,6 @@
 
 namespace rambler { namespace XML {
 
-    Element Element::NoElement = Element();
-
     StrongPointer<Element> Element::createWithName(String name)
     {
         return makeStrongPointer<Element>(name, nullptr, nullptr);
@@ -200,8 +198,8 @@ namespace rambler { namespace XML {
 
             auto element = std::dynamic_pointer_cast<Element>(child);
 
-            Attribute idAttribute = element->getAttribute("id");
-            if (idAttribute != Attribute::NoAttribute && idAttribute.getValue() == id) {
+            auto idAttribute = element->getAttribute("id");
+            if (idAttribute && idAttribute->getValue() == id) {
                 return element;
             }
         }
@@ -278,45 +276,42 @@ namespace rambler { namespace XML {
         return temp->getNamespaceByPrefix(prefix);
     }
 
-    void Element::addAttribute(Attribute attribute)
+    void Element::addAttribute(StrongPointer<Attribute const> attribute)
     {
         attributes.insert(attribute);
     }
 
-    void Element::addAttributes(std::set<Attribute> attributes)
+    void Element::addAttributes(std::set<StrongPointer<Attribute const>> attributes)
     {
         for (auto attribute : attributes) {
             addAttribute(attribute);
         }
     }
 
-    Attribute Element::getAttribute(String name) const
+    StrongPointer<Attribute const> Element::getAttribute(String name) const
     {
         return getAttribute(Namespace::DefaultNamespace(), name);
     }
 
-    Attribute Element::getAttribute(StrongPointer<Namespace const> xmlnamespace, String name) const
+    StrongPointer<Attribute const> Element::getAttribute(StrongPointer<Namespace const> xmlnamespace, String name) const
     {
-        auto result = attributes.find(Attribute(xmlnamespace, name, "" /* Value doesn't matter */));
+        auto result = attributes.find(Attribute::create(xmlnamespace, name, "" /* Value doesn't matter */));
 
         if (result == attributes.end()) {
-            return Attribute::NoAttribute;
+            return nullptr;
         }
 
         return *result;
     }
 
-    std::set<Attribute> Element::getAttributes() const
+    std::set<StrongPointer<Attribute const>> Element::getAttributes() const
     {
         return attributes;
     }
 
-    void Element::setAttributes(std::set<Attribute> attributes)
+    void Element::setAttributes(std::set<StrongPointer<Attribute const>> attributes)
     {
-#ifndef _MSC_VER
-#warning FIXME: setAttributes is broken!
-#endif
-        //this->attributes = attributes;
+        this->attributes = attributes;
     }
 
     void Element::removeAttribute(String name)
@@ -326,7 +321,7 @@ namespace rambler { namespace XML {
 
     void Element::removeAttribute(StrongPointer<Namespace const> xmlnamespace, String name)
     {
-        attributes.erase(Attribute(xmlnamespace, name, "" /* Value doesn't matter */));
+        attributes.erase(Attribute::create(xmlnamespace, name, "" /* Value doesn't matter */));
     }
 
     String Element::getStringValue() const {
@@ -336,7 +331,7 @@ namespace rambler { namespace XML {
 
         startTag = "<" + getQualifiedName();
         for (auto attribute: attributes) {
-            startTag += " " + attribute.getStringValue();
+            startTag += " " + attribute->getStringValue();
         }
 
         if (!XML::equivalent(defaultNamespace, Namespace::DefaultNamespace())) {

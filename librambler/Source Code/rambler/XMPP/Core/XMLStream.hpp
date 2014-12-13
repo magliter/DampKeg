@@ -31,6 +31,8 @@ namespace rambler { namespace XMPP { namespace Core {
 
         using XMLElementReceivedEventHandler = function<void(StrongPointer<XML::Element>)>;
 
+        static void initialize();
+
         /* Static Constants */
         static const String Stream_Namespace_String;
         static const String TLS_Namespace_String;

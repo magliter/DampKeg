@@ -32,10 +32,10 @@
 		075B914D1A3A5B4A0032D908 /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075B914A1A3A5B4A0032D908 /* memory.cpp */; };
 		075B914E1A3A5B4A0032D908 /* memory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075B914B1A3A5B4A0032D908 /* memory.hpp */; };
 		075B914F1A3A5B4A0032D908 /* RCAllocator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075B914C1A3A5B4A0032D908 /* RCAllocator.hpp */; };
-		075B91551A3ABEB90032D908 /* JID.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91501A3ABEB90032D908 /* JID.h */; };
+		075B91551A3ABEB90032D908 /* JID.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91501A3ABEB90032D908 /* JID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075B91561A3ABEB90032D908 /* JID.internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91511A3ABEB90032D908 /* JID.internal.h */; };
 		075B91571A3ABEB90032D908 /* JID.mm in Sources */ = {isa = PBXBuildFile; fileRef = 075B91521A3ABEB90032D908 /* JID.mm */; };
-		075B91581A3ABEB90032D908 /* XMLStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91531A3ABEB90032D908 /* XMLStream.h */; };
+		075B91581A3ABEB90032D908 /* XMLStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91531A3ABEB90032D908 /* XMLStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075B91591A3ABEB90032D908 /* XMLStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 075B91541A3ABEB90032D908 /* XMLStream.mm */; };
 		075B915D1A3AC22E0032D908 /* StrongPointer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075B915B1A3AC22E0032D908 /* StrongPointer.hpp */; };
 		076FC726197789F90046A227 /* timestamp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076FC725197789F90046A227 /* timestamp.mm */; };
@@ -706,10 +706,10 @@
 				07E761FE197B8A5700CD1BDE /* XMLNamespace.h in Headers */,
 				070B9765197F6E3900873940 /* StreamState.h in Headers */,
 				0715A6311954FC6C004519D9 /* XMLStream.hpp in Headers */,
-				075B91581A3ABEB90032D908 /* XMLStream.h in Headers */,
 				07F81483196E2B1C00207EC1 /* TCPConnection.h in Headers */,
 				07F8146F196E2AF300207EC1 /* Message.h in Headers */,
 				07A30663196F79B000D9523E /* RosterItem.hpp in Headers */,
+				075B91581A3ABEB90032D908 /* XMLStream.h in Headers */,
 				075B91551A3ABEB90032D908 /* JID.h in Headers */,
 				075B915D1A3AC22E0032D908 /* StrongPointer.hpp in Headers */,
 				07F81471196E2AF300207EC1 /* RosterItem.h in Headers */,

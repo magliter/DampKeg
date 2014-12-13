@@ -9,6 +9,7 @@
 #include "rambler/XMPP/Core/XMLStream.hpp"
 
 #include <algorithm>
+#include <iostream>
 
 namespace rambler { namespace XMPP { namespace Core {
 
@@ -121,7 +122,7 @@ namespace rambler { namespace XMPP { namespace Core {
             String attributeName = attributeData[0];
             String attributeValue = attributeData[1];
 
-            element->addAttribute({attributeName, attributeValue});
+            element->addAttribute(attributeName, attributeValue);
 
             attributeData += 2;
         }

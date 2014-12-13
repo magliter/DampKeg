@@ -22,15 +22,15 @@ class SubscriptionRequestWindowController : NSWindowController {
     @IBAction func userDidAcceptSubscriptionRequest(sender: AnyObject?) {
         client?.acceptSubscriptionRequestFromJID(jid)
         NSOperationQueue.mainQueue().addOperationWithBlock {
-            self.window.close()
-            self.appDelegate?.subscriptionRequestWindowControllers?.removeObjectForKey(self.jid)
+            self.window?.close()
+            self.appDelegate?.subscriptionRequestWindowControllers?.removeObjectForKey(self.jid!)
         }
     }
 
     @IBAction func userDidRejectSubscriptionRequest(sender: AnyObject?) {
         client?.rejectSubscriptionRequestFromJID(jid)
-        window.orderOut(sender)
+        window?.orderOut(sender)
 
-        appDelegate?.subscriptionRequestWindowControllers?.removeObjectForKey(jid)
+        appDelegate?.subscriptionRequestWindowControllers?.removeObjectForKey(jid!)
     }
 }

@@ -9,8 +9,6 @@
 
 namespace rambler { namespace XML {
 
-    Attribute Attribute::NoAttribute = Attribute();
-
     Attribute::Attribute() : NamespaceableNode(Type::Attribute)
     {
         /* Nothing to do here */
@@ -68,12 +66,17 @@ namespace rambler { namespace XML {
         return !(*this == other);
     }
 
-//    bool equivalent(StrongPointer<Attribute> const anElement, StrongPointer<Attribute> const anotherElement)
-//    {
-//        return ((anElement->getValue() == anotherElement->getValue()) &&
-//                (anElement->getName() == anotherElement->getName()) &&
-//                (equivalent(anElement->getNamespace(), anotherElement->getNamespace()));
-//    }
+    bool operator <  (StrongPointer<Attribute const> a, StrongPointer<Attribute const> b) {
+        return *a < *b;
+    }
+
+    bool operator == (StrongPointer<Attribute const> a, StrongPointer<Attribute const> b) {
+        return *a == *b;
+    }
+
+    bool operator != (StrongPointer<Attribute const> a, StrongPointer<Attribute const> b) {
+        return *a != *b;
+    }
 
 
 }}

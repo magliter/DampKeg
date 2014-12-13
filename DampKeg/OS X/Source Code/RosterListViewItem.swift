@@ -37,7 +37,7 @@ class RosterListViewItem : NSObject {
         if isGroup {
             return groupName!;
         } else {
-            return rosterItem!.name ? rosterItem!.name : rosterItem!.jid.description
+            return (rosterItem!.name != nil) ? rosterItem!.name : rosterItem!.jid.description
         }
     }
     }
@@ -62,7 +62,7 @@ class RosterListViewItem : NSObject {
         if isGroup {
             return NSColor.controlTextColor()
         } else {
-            if presence? {
+            if presence != nil {
                 switch presence!.state {
                 case .Available:
                     return NSColor.controlTextColor();

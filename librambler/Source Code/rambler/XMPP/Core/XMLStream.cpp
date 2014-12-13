@@ -269,7 +269,7 @@ namespace rambler { namespace XMPP { namespace Core {
 #endif
                         context->sentBindRequest = true;
                         bind();
-                    } else if (element->getName() == "iq"  && element->getAttribute("type").getValue() == "result" ) {
+                    } else if (element->getName() == "iq"  && element->getAttribute("type")->getValue() == "result" ) {
                         auto bindElements = element->getElementsByName("bind", Bind_Namespace);
                         if (!bindElements.empty()) {
                             auto bindElement = bindElements.front();
@@ -382,8 +382,8 @@ namespace rambler { namespace XMPP { namespace Core {
     void XMLStream::bind()
     {
         StrongPointer<XML::Element> iqElement = XML::Element::createWithName("iq");
-        iqElement->addAttribute({"id", std::to_string(context->getID())});
-        iqElement->addAttribute({"type", "set"});
+        iqElement->addAttribute("id", std::to_string(context->getID()));
+        iqElement->addAttribute("type", "set");
 
         StrongPointer<XML::Element> bindElement = XML::Element::createWithName("bind", Bind_Namespace);
         iqElement->addChild(bindElement);
@@ -394,7 +394,7 @@ namespace rambler { namespace XMPP { namespace Core {
     void XMLStream::authenticateSASL_Plain(String authorizationID, String authenticationID, String password)
     {
         StrongPointer<XML::Element> authElement = XML::Element::createWithName("auth", SASL_Namespace);
-        authElement->addAttribute({"mechanism", "PLAIN"});
+        authElement->addAttribute("mechanism", "PLAIN");
 
         String payload;
         password.reserve(authorizationID.size() + authenticationID.size() +  password.size() + 2);

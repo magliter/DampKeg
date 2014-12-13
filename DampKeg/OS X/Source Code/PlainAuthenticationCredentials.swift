@@ -12,11 +12,11 @@ class PlainAuthenticationCredentials : NSObject {
     var username:String? {
         didSet {
             if let JID = username {
-                isValid = JID.rangeOfString(".+@.+", options: .RegularExpressionSearch) ? true : false
+                isValid = JID.rangeOfString(".+@.+", options: .RegularExpressionSearch) != nil ? true : false
             }
         }
     }
 
     var password:String?
-    var isValid = false
+    dynamic var isValid:Bool = false
 }

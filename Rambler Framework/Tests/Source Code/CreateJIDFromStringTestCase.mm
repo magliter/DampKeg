@@ -18,15 +18,6 @@ using rambler::XMPP::Core::JID;
 
 @implementation CreateJIDFromStringTestCase
 
-+ (void)initialize {
-    static BOOL initialized = NO;
-    if (initialized) {
-        return;
-    }
-
-    rambler::initialize();
-}
-
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -43,6 +34,7 @@ using rambler::XMPP::Core::JID;
     auto jid = JID::createJIDWithString("omar@dampkeg.com");
 
     XCTAssert(jid == JID::createJIDWithComponents("omar", "dampkeg.com", ""), @"Pass");
+    XCTAssert(jid->description == "omar@dampkeg.com");
 }
 
 - (void)testJIDString_WithLocalPart_AndDomainPart_AndResourcePart {
