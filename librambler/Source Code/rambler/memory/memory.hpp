@@ -12,6 +12,8 @@
 
 namespace rambler { namespace memory {
 
+    void initialize();
+
     void * allocate(UInt count, UInt size);
     void * allocateBytes(UInt count);
 

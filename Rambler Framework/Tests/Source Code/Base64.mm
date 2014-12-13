@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
+#include "rambler/rambler.hpp"
 #include "rambler/base64/base64.hpp"
 
 using namespace rambler;
@@ -17,6 +18,15 @@ using namespace rambler;
 @end
 
 @implementation Base64
+
++ (void)initialize {
+    static BOOL initialized = NO;
+    if (initialized) {
+        return;
+    }
+
+    rambler::initialize();
+}
 
 - (void)setUp {
     [super setUp];
