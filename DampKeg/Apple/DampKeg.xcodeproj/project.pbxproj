@@ -1,0 +1,1014 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07A2EA001A40951900411B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2E9FF1A40951900411B46 /* AppDelegate.swift */; };
+		07A2EA021A40951900411B46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2EA011A40951900411B46 /* ViewController.swift */; };
+		07A2EA041A40951900411B46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A2EA031A40951900411B46 /* Images.xcassets */; };
+		07A2EA071A40951900411B46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A2EA051A40951900411B46 /* Main.storyboard */; };
+		07A2EA131A40951900411B46 /* DampKegTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2EA121A40951900411B46 /* DampKegTests.swift */; };
+		07B503591A409D420060D07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B503581A409D420060D07C /* AppDelegate.swift */; };
+		07B5035B1A409D420060D07C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B5035A1A409D420060D07C /* ViewController.swift */; };
+		07B5035E1A409D420060D07C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B5035C1A409D420060D07C /* Main.storyboard */; };
+		07B503601A409D420060D07C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B5035F1A409D420060D07C /* Images.xcassets */; };
+		07B503631A409D420060D07C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B503611A409D420060D07C /* LaunchScreen.xib */; };
+		07B5036F1A409D420060D07C /* DampKeg__iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B5036E1A409D420060D07C /* DampKeg__iOS_Tests.swift */; };
+		07DE4E241A40A9D400DF46CE /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E231A40A9D400DF46CE /* Rambler.framework */; };
+		07DE4E251A40A9D400DF46CE /* Rambler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E231A40A9D400DF46CE /* Rambler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		071A764E1A40B1EF006B41A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07D1E6CF1950A833008C76CF;
+			remoteInfo = "Rambler (OS X)";
+		};
+		071A76501A40B1EF006B41A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07D1E6DA1950A833008C76CF;
+			remoteInfo = "Rambler – Tests (OS X)";
+		};
+		071A76521A40B1EF006B41A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07461EBF1974E7EC002B3DF3;
+			remoteInfo = "Example Client (Objective-C)";
+		};
+		071A76541A40B1EF006B41A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07DE4E2D1A40ADBE00DF46CE;
+			remoteInfo = "Rambler (iOS)";
+		};
+		071A76561A40B1EF006B41A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07DE4E371A40ADBE00DF46CE;
+			remoteInfo = "Rambler – Tests (iOS)";
+		};
+		07A2EA0D1A40951900411B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A2E9F01A40950100411B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A2E9F91A40951900411B46;
+			remoteInfo = DampKeg;
+		};
+		07B503691A409D420060D07C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A2E9F01A40950100411B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B503531A409D420060D07C;
+			remoteInfo = "DampKeg (iOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07DE4E261A40A9D400DF46CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07DE4E251A40A9D400DF46CE /* Rambler.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07A2E9FA1A40951900411B46 /* DampKeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DampKeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A2E9FE1A40951900411B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A2E9FF1A40951900411B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07A2EA011A40951900411B46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07A2EA031A40951900411B46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07A2EA061A40951900411B46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07A2EA0C1A40951900411B46 /* DampKegTests (OS X).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DampKegTests (OS X).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A2EA111A40951900411B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A2EA121A40951900411B46 /* DampKegTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DampKegTests.swift; sourceTree = "<group>"; };
+		07B503541A409D420060D07C /* DampKeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DampKeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B503571A409D420060D07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B503581A409D420060D07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07B5035A1A409D420060D07C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07B5035D1A409D420060D07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07B5035F1A409D420060D07C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07B503621A409D420060D07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		07B503681A409D420060D07C /* DampKeg (iOS)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DampKeg (iOS)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B5036D1A409D420060D07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B5036E1A409D420060D07C /* DampKeg__iOS_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DampKeg__iOS_Tests.swift; sourceTree = "<group>"; };
+		07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rambler.xcodeproj; path = "../../Rambler Framework/Rambler.xcodeproj"; sourceTree = "<group>"; };
+		07DE4E231A40A9D400DF46CE /* Rambler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Rambler.framework; path = /Users/omar/Projects/DampKeg/DerivedData/DampKeg/Build/Products/Debug/Rambler.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07A2E9F71A40951900411B46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DE4E241A40A9D400DF46CE /* Rambler.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A2EA091A40951900411B46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07B503511A409D420060D07C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07B503651A409D420060D07C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		071A76471A40B1EF006B41A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				071A764F1A40B1EF006B41A8 /* Rambler.framework */,
+				071A76511A40B1EF006B41A8 /* Rambler – Tests.xctest */,
+				071A76531A40B1EF006B41A8 /* Example Client (Objective-C) */,
+				071A76551A40B1EF006B41A8 /* Rambler-iOS.framework */,
+				071A76571A40B1EF006B41A8 /* Rambler-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07A2E9EF1A40950100411B46 = {
+			isa = PBXGroup;
+			children = (
+				07A2E9FC1A40951900411B46 /* OS X */,
+				07B503551A409D420060D07C /* iOS */,
+				07B5036B1A409D420060D07C /* Tests */,
+				07DE4E271A40AA3E00DF46CE /* Frameworks */,
+				07A2E9FB1A40951900411B46 /* Products */,
+				07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		07A2E9FB1A40951900411B46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07A2E9FA1A40951900411B46 /* DampKeg.app */,
+				07A2EA0C1A40951900411B46 /* DampKegTests (OS X).xctest */,
+				07B503541A409D420060D07C /* DampKeg.app */,
+				07B503681A409D420060D07C /* DampKeg (iOS)Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07A2E9FC1A40951900411B46 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				07A2EA1B1A40969F00411B46 /* Resources */,
+				07A2EA1A1A40961500411B46 /* Source Code */,
+				07A2E9FD1A40951900411B46 /* Supporting Files */,
+				07A2EA0F1A40951900411B46 /* Tests */,
+			);
+			path = "OS X";
+			sourceTree = "<group>";
+		};
+		07A2E9FD1A40951900411B46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A2E9FE1A40951900411B46 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07A2EA0F1A40951900411B46 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07A2EA121A40951900411B46 /* DampKegTests.swift */,
+				07A2EA101A40951900411B46 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		07A2EA101A40951900411B46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A2EA111A40951900411B46 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07A2EA1A1A40961500411B46 /* Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				07A2E9FF1A40951900411B46 /* AppDelegate.swift */,
+				07A2EA011A40951900411B46 /* ViewController.swift */,
+			);
+			path = "Source Code";
+			sourceTree = "<group>";
+		};
+		07A2EA1B1A40969F00411B46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07A2EA031A40951900411B46 /* Images.xcassets */,
+				07A2EA051A40951900411B46 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07B503551A409D420060D07C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				07B503771A409D9D0060D07C /* Resources */,
+				07B503761A409D960060D07C /* Source Code */,
+				07B503561A409D420060D07C /* Supporting Files */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		07B503561A409D420060D07C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07B503571A409D420060D07C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07B5036B1A409D420060D07C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07B5036E1A409D420060D07C /* DampKeg__iOS_Tests.swift */,
+				07B5036C1A409D420060D07C /* Supporting Files */,
+			);
+			name = Tests;
+			path = iOS/Tests;
+			sourceTree = "<group>";
+		};
+		07B5036C1A409D420060D07C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07B5036D1A409D420060D07C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07B503761A409D960060D07C /* Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				07B503581A409D420060D07C /* AppDelegate.swift */,
+				07B5035A1A409D420060D07C /* ViewController.swift */,
+			);
+			path = "Source Code";
+			sourceTree = "<group>";
+		};
+		07B503771A409D9D0060D07C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07B5035C1A409D420060D07C /* Main.storyboard */,
+				07B5035F1A409D420060D07C /* Images.xcassets */,
+				07B503611A409D420060D07C /* LaunchScreen.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07DE4E271A40AA3E00DF46CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07DE4E231A40A9D400DF46CE /* Rambler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07A2E9F91A40951900411B46 /* DampKeg (OS X) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A2EA141A40951900411B46 /* Build configuration list for PBXNativeTarget "DampKeg (OS X)" */;
+			buildPhases = (
+				07A2E9F61A40951900411B46 /* Sources */,
+				07A2E9F71A40951900411B46 /* Frameworks */,
+				07A2E9F81A40951900411B46 /* Resources */,
+				07DE4E261A40A9D400DF46CE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DampKeg (OS X)";
+			productName = DampKeg;
+			productReference = 07A2E9FA1A40951900411B46 /* DampKeg.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07A2EA0B1A40951900411B46 /* DampKegTests (OS X) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A2EA171A40951900411B46 /* Build configuration list for PBXNativeTarget "DampKegTests (OS X)" */;
+			buildPhases = (
+				07A2EA081A40951900411B46 /* Sources */,
+				07A2EA091A40951900411B46 /* Frameworks */,
+				07A2EA0A1A40951900411B46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07A2EA0E1A40951900411B46 /* PBXTargetDependency */,
+			);
+			name = "DampKegTests (OS X)";
+			productName = DampKegTests;
+			productReference = 07A2EA0C1A40951900411B46 /* DampKegTests (OS X).xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07B503531A409D420060D07C /* DampKeg (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07B503701A409D420060D07C /* Build configuration list for PBXNativeTarget "DampKeg (iOS)" */;
+			buildPhases = (
+				07B503501A409D420060D07C /* Sources */,
+				07B503511A409D420060D07C /* Frameworks */,
+				07B503521A409D420060D07C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DampKeg (iOS)";
+			productName = "DampKeg (iOS)";
+			productReference = 07B503541A409D420060D07C /* DampKeg.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07B503671A409D420060D07C /* DampKeg (iOS)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07B503731A409D420060D07C /* Build configuration list for PBXNativeTarget "DampKeg (iOS)Tests" */;
+			buildPhases = (
+				07B503641A409D420060D07C /* Sources */,
+				07B503651A409D420060D07C /* Frameworks */,
+				07B503661A409D420060D07C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07B5036A1A409D420060D07C /* PBXTargetDependency */,
+			);
+			name = "DampKeg (iOS)Tests";
+			productName = "DampKeg (iOS)Tests";
+			productReference = 07B503681A409D420060D07C /* DampKeg (iOS)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07A2E9F01A40950100411B46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					07A2E9F91A40951900411B46 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					07A2EA0B1A40951900411B46 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 07A2E9F91A40951900411B46;
+					};
+					07B503531A409D420060D07C = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = W25DC4C3R7;
+					};
+					07B503671A409D420060D07C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 07B503531A409D420060D07C;
+					};
+				};
+			};
+			buildConfigurationList = 07A2E9F31A40950100411B46 /* Build configuration list for PBXProject "DampKeg" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07A2E9EF1A40950100411B46;
+			productRefGroup = 07A2E9FB1A40951900411B46 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 071A76471A40B1EF006B41A8 /* Products */;
+					ProjectRef = 07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				07A2E9F91A40951900411B46 /* DampKeg (OS X) */,
+				07A2EA0B1A40951900411B46 /* DampKegTests (OS X) */,
+				07B503531A409D420060D07C /* DampKeg (iOS) */,
+				07B503671A409D420060D07C /* DampKeg (iOS)Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		071A764F1A40B1EF006B41A8 /* Rambler.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rambler.framework;
+			remoteRef = 071A764E1A40B1EF006B41A8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		071A76511A40B1EF006B41A8 /* Rambler – Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = "Rambler – Tests.xctest";
+			path = "Rambler – Tests (OS X).xctest";
+			remoteRef = 071A76501A40B1EF006B41A8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		071A76531A40B1EF006B41A8 /* Example Client (Objective-C) */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "Example Client (Objective-C)";
+			remoteRef = 071A76521A40B1EF006B41A8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		071A76551A40B1EF006B41A8 /* Rambler-iOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "Rambler-iOS.framework";
+			path = "Rambler (iOS).framework";
+			remoteRef = 071A76541A40B1EF006B41A8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		071A76571A40B1EF006B41A8 /* Rambler-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = "Rambler-iOSTests.xctest";
+			path = "Rambler – Tests (iOS).xctest";
+			remoteRef = 071A76561A40B1EF006B41A8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07A2E9F81A40951900411B46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A2EA041A40951900411B46 /* Images.xcassets in Resources */,
+				07A2EA071A40951900411B46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A2EA0A1A40951900411B46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07B503521A409D420060D07C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B5035E1A409D420060D07C /* Main.storyboard in Resources */,
+				07B503631A409D420060D07C /* LaunchScreen.xib in Resources */,
+				07B503601A409D420060D07C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07B503661A409D420060D07C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07A2E9F61A40951900411B46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A2EA021A40951900411B46 /* ViewController.swift in Sources */,
+				07A2EA001A40951900411B46 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A2EA081A40951900411B46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A2EA131A40951900411B46 /* DampKegTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07B503501A409D420060D07C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B5035B1A409D420060D07C /* ViewController.swift in Sources */,
+				07B503591A409D420060D07C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07B503641A409D420060D07C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B5036F1A409D420060D07C /* DampKeg__iOS_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07A2EA0E1A40951900411B46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A2E9F91A40951900411B46 /* DampKeg (OS X) */;
+			targetProxy = 07A2EA0D1A40951900411B46 /* PBXContainerItemProxy */;
+		};
+		07B5036A1A409D420060D07C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07B503531A409D420060D07C /* DampKeg (iOS) */;
+			targetProxy = 07B503691A409D420060D07C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07A2EA051A40951900411B46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07A2EA061A40951900411B46 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07B5035C1A409D420060D07C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07B5035D1A409D420060D07C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07B503611A409D420060D07C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07B503621A409D420060D07C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07A2E9F41A40950100411B46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		07A2E9F51A40950100411B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		07A2EA151A40951900411B46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/omar/Projects/DampKeg/DerivedData/DampKeg/Build/Products/Debug,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/OS X/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = DampKeg;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07A2EA161A40951900411B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/omar/Projects/DampKeg/DerivedData/DampKeg/Build/Products/Debug,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/OS X/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DampKeg;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		07A2EA181A40951900411B46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "OS X/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DampKeg.app/Contents/MacOS/DampKeg";
+			};
+			name = Debug;
+		};
+		07A2EA191A40951900411B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "OS X/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DampKeg.app/Contents/MacOS/DampKeg";
+			};
+			name = Release;
+		};
+		07B503711A409D420060D07C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = DampKeg;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07B503721A409D420060D07C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DampKeg;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07B503741A409D420060D07C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = iOS/Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DampKeg.app/DampKeg";
+			};
+			name = Debug;
+		};
+		07B503751A409D420060D07C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = iOS/Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DampKeg.app/DampKeg";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07A2E9F31A40950100411B46 /* Build configuration list for PBXProject "DampKeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A2E9F41A40950100411B46 /* Debug */,
+				07A2E9F51A40950100411B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07A2EA141A40951900411B46 /* Build configuration list for PBXNativeTarget "DampKeg (OS X)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A2EA151A40951900411B46 /* Debug */,
+				07A2EA161A40951900411B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07A2EA171A40951900411B46 /* Build configuration list for PBXNativeTarget "DampKegTests (OS X)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A2EA181A40951900411B46 /* Debug */,
+				07A2EA191A40951900411B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07B503701A409D420060D07C /* Build configuration list for PBXNativeTarget "DampKeg (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07B503711A409D420060D07C /* Debug */,
+				07B503721A409D420060D07C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07B503731A409D420060D07C /* Build configuration list for PBXNativeTarget "DampKeg (iOS)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07B503741A409D420060D07C /* Debug */,
+				07B503751A409D420060D07C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07A2E9F01A40950100411B46 /* Project object */;
+}

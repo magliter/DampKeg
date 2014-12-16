@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DampKeg/OS X/DampKeg.xcodeproj">
+      location = "group:DampKeg/Apple/DampKeg.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DampKeg/Capstone/DampKeg/OS X/DampKeg (Capstone).xcodeproj">
    </FileRef>
 </Workspace>
