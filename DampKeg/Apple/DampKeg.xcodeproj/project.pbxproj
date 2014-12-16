@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071A76961A40C917006B41A8 /* Rambler-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071A76551A40B1EF006B41A8 /* Rambler-iOS.framework */; };
+		071A76971A40C917006B41A8 /* Rambler-iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 071A76551A40B1EF006B41A8 /* Rambler-iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07A2EA001A40951900411B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2E9FF1A40951900411B46 /* AppDelegate.swift */; };
 		07A2EA021A40951900411B46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2EA011A40951900411B46 /* ViewController.swift */; };
 		07A2EA041A40951900411B46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A2EA031A40951900411B46 /* Images.xcassets */; };
@@ -58,6 +60,13 @@
 			remoteGlobalIDString = 07DE4E371A40ADBE00DF46CE;
 			remoteInfo = "Rambler – Tests (iOS)";
 		};
+		071A76981A40C917006B41A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE4E171A40A70100DF46CE /* Rambler.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07DE4E2C1A40ADBE00DF46CE;
+			remoteInfo = "Rambler (iOS)";
+		};
 		07A2EA0D1A40951900411B46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07A2E9F01A40950100411B46 /* Project object */;
@@ -75,6 +84,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		071A769A1A40C917006B41A8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				071A76971A40C917006B41A8 /* Rambler-iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07DE4E261A40A9D400DF46CE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071A76961A40C917006B41A8 /* Rambler-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +364,12 @@
 				07B503501A409D420060D07C /* Sources */,
 				07B503511A409D420060D07C /* Frameworks */,
 				07B503521A409D420060D07C /* Resources */,
+				071A769A1A40C917006B41A8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				071A76991A40C917006B41A8 /* PBXTargetDependency */,
 			);
 			name = "DampKeg (iOS)";
 			productName = "DampKeg (iOS)";
@@ -538,6 +561,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		071A76991A40C917006B41A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Rambler (iOS)";
+			targetProxy = 071A76981A40C917006B41A8 /* PBXContainerItemProxy */;
+		};
 		07A2EA0E1A40951900411B46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 07A2E9F91A40951900411B46 /* DampKeg (OS X) */;
