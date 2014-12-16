@@ -10,7 +10,7 @@
 #include "rambler/Connection/TCPConnection.hpp"
 
 #include <CoreFoundation/CoreFoundation.h>
-#include <Security/Security.h>
+#include <Security/SecureTransport.h>
 
 namespace rambler { namespace Connection {
 

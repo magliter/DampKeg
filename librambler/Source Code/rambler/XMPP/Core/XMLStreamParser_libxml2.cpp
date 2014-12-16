@@ -128,9 +128,9 @@ namespace rambler { namespace XMPP { namespace Core {
                 auto attributeNamespace = XML::Namespace::createWithNameAndPrefix(attributeNamespaceURI,
                                                                                   attributeNamespacePrefix);
 
-                element->addAttribute({ attributeNamespace, attributeName, attributeValue });
+                element->addAttribute(attributeNamespace, attributeName, attributeValue);
             } else {
-                element->addAttribute({ attributeName, attributeValue });
+                element->addAttribute(attributeName, attributeValue);
             }
         }
 

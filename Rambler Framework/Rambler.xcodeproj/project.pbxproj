@@ -65,6 +65,7 @@
 		071A76911A40B6ED006B41A8 /* Presence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0772D5EA19837AA900AC399F /* Presence.cpp */; };
 		071A76921A40B6ED006B41A8 /* RosterItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A3065D196F79B000D9523E /* RosterItem.cpp */; };
 		071A76931A40B704006B41A8 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F36FDF197744E1001A00A0 /* Client.cpp */; };
+		071A76951A40C40D006B41A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E481A40AE1800DF46CE /* Security.framework */; };
 		07333DED196A46BD0000D8F3 /* XMLStream_Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07333DEC196A46BD0000D8F3 /* XMLStream_Context.cpp */; };
 		0739C3DA195B9D8F006A7EA8 /* types.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0739C3D9195B9D8F006A7EA8 /* types.hpp */; };
 		0739C3E9195BB781006A7EA8 /* Attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0739C3E8195BB781006A7EA8 /* Attribute.cpp */; };
@@ -114,7 +115,6 @@
 		07DE4E381A40ADBE00DF46CE /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E2D1A40ADBE00DF46CE /* Rambler.framework */; };
 		07DE4E3F1A40ADBE00DF46CE /* Rambler_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE4E3E1A40ADBE00DF46CE /* Rambler_iOSTests.m */; };
 		07DE4E471A40AE1300DF46CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E461A40AE1300DF46CE /* Foundation.framework */; };
-		07DE4E491A40AE1800DF46CE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E481A40AE1800DF46CE /* Security.framework */; };
 		07DE4E4B1A40AE2800DF46CE /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E4A1A40AE2800DF46CE /* libxml2.dylib */; };
 		07DECDC71963C2F1007938D1 /* XMLStream_Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DECDC61963C2F1007938D1 /* XMLStream_Constants.cpp */; };
 		07DECDCD196414AC007938D1 /* TCPConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DECDCC196414AC007938D1 /* TCPConnection.cpp */; };
@@ -395,7 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07DE4E4B1A40AE2800DF46CE /* libxml2.dylib in Frameworks */,
-				07DE4E491A40AE1800DF46CE /* Security.framework in Frameworks */,
+				071A76951A40C40D006B41A8 /* Security.framework in Frameworks */,
 				07DE4E471A40AE1300DF46CE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1432,13 +1432,11 @@
 		07DE4E401A40ADBE00DF46CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1458,13 +1456,11 @@
 		07DE4E411A40ADBE00DF46CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1491,7 +1487,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Rambler-iOSTests/Info.plist";
+				INFOPLIST_FILE = iOS/Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1509,7 +1505,7 @@
 					"$(inherited)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				INFOPLIST_FILE = "Rambler-iOSTests/Info.plist";
+				INFOPLIST_FILE = iOS/Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
