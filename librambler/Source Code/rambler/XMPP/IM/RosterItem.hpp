@@ -23,6 +23,11 @@ namespace rambler { namespace XMPP { namespace IM {
         String                      const   name;
         std::vector<String const>           groups;
 
+        RosterItem(StrongPointer<JID const> jid,
+                   SubscriptionState subscriptionState,
+                   String name,
+                   std::vector<String const> groups);
+
         static StrongPointer<RosterItem const> createRosterItem(StrongPointer<JID const> jid,
                                                                 SubscriptionState subscriptionState,
                                                                 String name,
@@ -40,12 +45,6 @@ namespace rambler { namespace XMPP { namespace IM {
                                                                 SubscriptionState subscriptionState);
 
         String description() const;
-
-    private:
-        RosterItem(StrongPointer<JID const> jid,
-                   SubscriptionState subscriptionState,
-                   String name,
-                   std::vector<String const> groups);
 
     };
 

@@ -21,7 +21,7 @@ namespace rambler { namespace XMPP { namespace IM {
             return nullptr;
         }
 
-        return StrongPointer<Message const>( new Message(sender, recipient, thread, subject, body, timestamp, uniqueID) );
+        return makeStrongPointer<Message const>(sender, recipient, thread, subject, body, timestamp, uniqueID);
     }
 
     String Message::description() const

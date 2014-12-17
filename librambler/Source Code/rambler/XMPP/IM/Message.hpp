@@ -16,6 +16,14 @@ namespace rambler { namespace XMPP { namespace IM {
 
     struct Message {
 
+        Message(StrongPointer<JID const> const sender,
+                StrongPointer<JID const> const recipient,
+                String                   const thread,
+                String                   const subject,
+                String                   const body,
+                String                   const timestamp,
+                String                   const uniqueID);
+
         StrongPointer<JID const> const sender;
         StrongPointer<JID const> const recipient;
         String                   const thread;
@@ -32,16 +40,7 @@ namespace rambler { namespace XMPP { namespace IM {
                                                           String                   const timestamp,
                                                           String                   const uniqueID);
 
-        String description() const;
-    private:
-        Message(StrongPointer<JID const> const sender,
-                StrongPointer<JID const> const recipient,
-                String                   const thread,
-                String                   const subject,
-                String                   const body,
-                String                   const timestamp,
-                String                   const uniqueID);
-        
+        String description() const;        
     };
 
 }}}

@@ -72,6 +72,6 @@ namespace rambler { namespace XML {
     
     StrongPointer<TextNode> TextNode::createWithContent(std::string content)
     {
-        return StrongPointer<TextNode> (new TextNode(content));
+        return makeStrongPointer<TextNode>(content);
     }
 }}

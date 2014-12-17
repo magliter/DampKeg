@@ -15,7 +15,7 @@ namespace rambler { namespace XMPP { namespace Core {
 
     StrongPointer<XMLStreamParser> XMLStreamParser::CreateParser(StrongPointer<XMLStream> stream)
     {
-        return std::make_shared<XMLStreamParser_expat>(stream);
+        return makeStrongPointer<XMLStreamParser_expat>(stream);
     }
 
 
@@ -180,7 +180,7 @@ namespace rambler { namespace XMPP { namespace Core {
 
         if (parser->currentElement != nullptr && len > 0) {
             String text(s, len);
-            auto textNode = std::make_shared<XML::TextNode>(text);
+            auto textNode = makeStrongPointer<XML::TextNode>(text);
             parser->currentElement->addChild(textNode);
         }
     }

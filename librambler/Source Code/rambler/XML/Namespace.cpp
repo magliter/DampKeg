@@ -11,7 +11,7 @@ namespace rambler { namespace XML {
 
     StrongPointer<Namespace const> Namespace::DefaultNamespace()
     {
-        return StrongPointer<Namespace const>(new Namespace);
+        return makeStrongPointer<Namespace const>();
     }
 
     StrongPointer<Namespace const> Namespace::createWithName(String name)
@@ -21,7 +21,7 @@ namespace rambler { namespace XML {
 
     StrongPointer<Namespace const> Namespace::createWithNameAndPrefix(String name, String prefix)
     {
-        return StrongPointer<Namespace const>(new Namespace(name, prefix));
+        return makeStrongPointer<Namespace const>(name, prefix);
     }
 
     Namespace::Namespace() : NameableNode(Type::Namespace)

@@ -16,7 +16,7 @@ namespace rambler { namespace XMPP { namespace IM {
 
     StrongPointer<Presence const> Presence::createWithStateAndMessage(State const state, String const message)
     {
-        return StrongPointer<Presence const>(new Presence(state, message));
+        return makeStrongPointer<Presence const>(state, message);
     }
 
     Presence::Presence(State const state, String const message) : state(state), message(message)

@@ -12,7 +12,7 @@ namespace rambler { namespace Connection {
 
     StrongPointer<TCPConnection> TCPConnection::nativeTCPConnection(String domainName, String serviceName)
     {
-        return std::make_shared<CFNetworkBasedTCPConnection>(domainName, serviceName);
+        return memory::makeStrongPointer<CFNetworkBasedTCPConnection>(domainName, serviceName);
     }
 
     CFNetworkBasedTCPConnection::CFNetworkBasedTCPConnection(String domainName, String serviceName)

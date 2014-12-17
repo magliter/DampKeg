@@ -24,11 +24,11 @@ namespace rambler { namespace XMPP { namespace IM {
         State const state;
         String const message;
 
+        Presence(State const state, String const message);
+
         static StrongPointer<Presence const> createWithState(State const state);
         static StrongPointer<Presence const> createWithStateAndMessage(State const state, String const message);
 
-    private:
-        Presence(State const state, String const message);
     };
 
 }}}

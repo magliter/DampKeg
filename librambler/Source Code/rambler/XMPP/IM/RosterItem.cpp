@@ -18,7 +18,7 @@ namespace rambler { namespace XMPP { namespace IM {
             return nullptr;
         }
 
-        return StrongPointer<RosterItem>(new RosterItem(jid, subscriptionState, name, groups));
+        return makeStrongPointer<RosterItem>(jid, subscriptionState, name, groups);
     }
 
     StrongPointer<RosterItem const> RosterItem::createRosterItem(StrongPointer<JID const> jid,
