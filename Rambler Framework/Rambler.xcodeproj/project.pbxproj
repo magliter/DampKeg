@@ -46,7 +46,6 @@
 		071A767E1A40B694006B41A8 /* TCPConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DECDCC196414AC007938D1 /* TCPConnection.cpp */; };
 		071A767F1A40B69F006B41A8 /* dns_utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D5DCC91950B2110041A7F3 /* dns_utilities.cpp */; };
 		071A76801A40B69F006B41A8 /* SRVRecordResolver_CFNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D5DCCB1950B2110041A7F3 /* SRVRecordResolver_CFNetwork.cpp */; };
-		071A76811A40B6A6006B41A8 /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075B914A1A3A5B4A0032D908 /* memory.cpp */; };
 		071A76821A40B6AD006B41A8 /* timestamp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076FC725197789F90046A227 /* timestamp.mm */; };
 		071A76831A40B6B2006B41A8 /* uuid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D9D967197817DF0017D850 /* uuid.cpp */; };
 		071A76841A40B6BE006B41A8 /* Attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0739C3E8195BB781006A7EA8 /* Attribute.cpp */; };
@@ -73,6 +72,13 @@
 		0739C3F1195BE732006A7EA8 /* Namespace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0739C3F0195BE732006A7EA8 /* Namespace.cpp */; };
 		073A3FFB197CE6DE00DC670F /* XMLStreamParser_expat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F9232B196D12C30010E3C4 /* XMLStreamParser_expat.cpp */; };
 		073A3FFD197CFC0600DC670F /* rambler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 073A3FFC197CFC0600DC670F /* rambler.hpp */; };
+		073D2F261A41480700E76071 /* MemoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073D2F211A41480700E76071 /* MemoryManager.cpp */; };
+		073D2F271A41480700E76071 /* MemoryManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 073D2F221A41480700E76071 /* MemoryManager.hpp */; };
+		073D2F281A41480700E76071 /* shared_memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073D2F231A41480700E76071 /* shared_memory.cpp */; };
+		073D2F291A41480700E76071 /* shared_memory.h in Headers */ = {isa = PBXBuildFile; fileRef = 073D2F241A41480700E76071 /* shared_memory.h */; };
+		073D2F2A1A41480700E76071 /* SharedMemoryAllocator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 073D2F251A41480700E76071 /* SharedMemoryAllocator.hpp */; };
+		073D2F2B1A41499A00E76071 /* MemoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073D2F211A41480700E76071 /* MemoryManager.cpp */; };
+		073D2F2C1A41499A00E76071 /* shared_memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073D2F231A41480700E76071 /* shared_memory.cpp */; };
 		07461EC21974E7EC002B3DF3 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07461EC11974E7EC002B3DF3 /* main.mm */; };
 		07461EC81974E95F002B3DF3 /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1E6CF1950A833008C76CF /* Rambler.framework */; };
 		07461ECE1974EB59002B3DF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1E6F01950A907008C76CF /* Foundation.framework */; };
@@ -80,9 +86,6 @@
 		0747F28F19608DCB003A0D0C /* NamespaceableNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0747F28E19608DCB003A0D0C /* NamespaceableNode.cpp */; };
 		075097621973679400CBBA60 /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075097611973679400CBBA60 /* Message.cpp */; };
 		075B91471A3A59BB0032D908 /* SafeInt3.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075B91461A3A59BB0032D908 /* SafeInt3.hpp */; };
-		075B914D1A3A5B4A0032D908 /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075B914A1A3A5B4A0032D908 /* memory.cpp */; };
-		075B914E1A3A5B4A0032D908 /* memory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075B914B1A3A5B4A0032D908 /* memory.hpp */; };
-		075B914F1A3A5B4A0032D908 /* RCAllocator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075B914C1A3A5B4A0032D908 /* RCAllocator.hpp */; };
 		075B91551A3ABEB90032D908 /* JID.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91501A3ABEB90032D908 /* JID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075B91561A3ABEB90032D908 /* JID.internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91511A3ABEB90032D908 /* JID.internal.h */; };
 		075B91571A3ABEB90032D908 /* JID.mm in Sources */ = {isa = PBXBuildFile; fileRef = 075B91521A3ABEB90032D908 /* JID.mm */; };
@@ -268,6 +271,11 @@
 		0739C3F0195BE732006A7EA8 /* Namespace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Namespace.cpp; sourceTree = "<group>"; };
 		073A3FFC197CFC0600DC670F /* rambler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rambler.hpp; sourceTree = "<group>"; };
 		073A3FFE197CFD7A00DC670F /* TCPConnection.internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPConnection.internal.h; sourceTree = "<group>"; };
+		073D2F211A41480700E76071 /* MemoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryManager.cpp; sourceTree = "<group>"; };
+		073D2F221A41480700E76071 /* MemoryManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoryManager.hpp; sourceTree = "<group>"; };
+		073D2F231A41480700E76071 /* shared_memory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shared_memory.cpp; sourceTree = "<group>"; };
+		073D2F241A41480700E76071 /* shared_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shared_memory.h; sourceTree = "<group>"; };
+		073D2F251A41480700E76071 /* SharedMemoryAllocator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SharedMemoryAllocator.hpp; sourceTree = "<group>"; };
 		07461EBF1974E7EC002B3DF3 /* Example Client (Objective-C) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example Client (Objective-C)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07461EC11974E7EC002B3DF3 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		0747F28A1960879E003A0D0C /* NameableNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NameableNode.hpp; sourceTree = "<group>"; };
@@ -277,9 +285,6 @@
 		075097601973678800CBBA60 /* Message.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Message.hpp; sourceTree = "<group>"; };
 		075097611973679400CBBA60 /* Message.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Message.cpp; sourceTree = "<group>"; };
 		075B91461A3A59BB0032D908 /* SafeInt3.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SafeInt3.hpp; sourceTree = "<group>"; };
-		075B914A1A3A5B4A0032D908 /* memory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = memory.cpp; sourceTree = "<group>"; };
-		075B914B1A3A5B4A0032D908 /* memory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = memory.hpp; sourceTree = "<group>"; };
-		075B914C1A3A5B4A0032D908 /* RCAllocator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RCAllocator.hpp; sourceTree = "<group>"; };
 		075B91501A3ABEB90032D908 /* JID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JID.h; sourceTree = "<group>"; };
 		075B91511A3ABEB90032D908 /* JID.internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JID.internal.h; sourceTree = "<group>"; };
 		075B91521A3ABEB90032D908 /* JID.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JID.mm; sourceTree = "<group>"; };
@@ -532,9 +537,11 @@
 		075B91491A3A5AFA0032D908 /* memory */ = {
 			isa = PBXGroup;
 			children = (
-				075B914A1A3A5B4A0032D908 /* memory.cpp */,
-				075B914B1A3A5B4A0032D908 /* memory.hpp */,
-				075B914C1A3A5B4A0032D908 /* RCAllocator.hpp */,
+				073D2F211A41480700E76071 /* MemoryManager.cpp */,
+				073D2F221A41480700E76071 /* MemoryManager.hpp */,
+				073D2F231A41480700E76071 /* shared_memory.cpp */,
+				073D2F241A41480700E76071 /* shared_memory.h */,
+				073D2F251A41480700E76071 /* SharedMemoryAllocator.hpp */,
 				075B915B1A3AC22E0032D908 /* StrongPointer.hpp */,
 			);
 			path = memory;
@@ -847,7 +854,7 @@
 				07F81486196E2B2D00207EC1 /* Rambler.h in Headers */,
 				073A3FFD197CFC0600DC670F /* rambler.hpp in Headers */,
 				07D5DCCE1950B2110041A7F3 /* dns_utilities.h in Headers */,
-				075B914E1A3A5B4A0032D908 /* memory.hpp in Headers */,
+				073D2F271A41480700E76071 /* MemoryManager.hpp in Headers */,
 				07BC431E197FDBF500FFFAFB /* SubscriptionState.h in Headers */,
 				07E761FE197B8A5700CD1BDE /* XMLNamespace.h in Headers */,
 				070B9765197F6E3900873940 /* StreamState.h in Headers */,
@@ -859,11 +866,12 @@
 				075B91551A3ABEB90032D908 /* JID.h in Headers */,
 				075B915D1A3AC22E0032D908 /* StrongPointer.hpp in Headers */,
 				07F81471196E2AF300207EC1 /* RosterItem.h in Headers */,
+				073D2F291A41480700E76071 /* shared_memory.h in Headers */,
+				073D2F2A1A41480700E76071 /* SharedMemoryAllocator.hpp in Headers */,
 				07D5DCD01950B2110041A7F3 /* SRVRecordResolver_CFNetwork.h in Headers */,
 				07E761FD197B8A5700CD1BDE /* XMLNameableNode.h in Headers */,
 				07BC431C197F783200FFFAFB /* Client.h in Headers */,
 				07A30666196F79B000D9523E /* SubscriptionState.hpp in Headers */,
-				075B914F1A3A5B4A0032D908 /* RCAllocator.hpp in Headers */,
 				075B91561A3ABEB90032D908 /* JID.internal.h in Headers */,
 				07E76205197C6EBC00CD1BDE /* XMLElement.h in Headers */,
 				07F81481196E2B1C00207EC1 /* Connection.h in Headers */,
@@ -1100,6 +1108,7 @@
 				075097621973679400CBBA60 /* Message.cpp in Sources */,
 				07DECDC71963C2F1007938D1 /* XMLStream_Constants.cpp in Sources */,
 				07ABAA0B1960B0EF001543FB /* TextNode.cpp in Sources */,
+				073D2F281A41480700E76071 /* shared_memory.cpp in Sources */,
 				0739C3F1195BE732006A7EA8 /* Namespace.cpp in Sources */,
 				07D5DCCF1950B2110041A7F3 /* SRVRecordResolver_CFNetwork.cpp in Sources */,
 				075B91571A3ABEB90032D908 /* JID.mm in Sources */,
@@ -1116,8 +1125,8 @@
 				07DECDCD196414AC007938D1 /* TCPConnection.cpp in Sources */,
 				07ABA9FE1960A8A4001543FB /* Element.cpp in Sources */,
 				07A30662196F79B000D9523E /* RosterItem.cpp in Sources */,
+				073D2F261A41480700E76071 /* MemoryManager.cpp in Sources */,
 				0747F28C196088B7003A0D0C /* NameableNode.cpp in Sources */,
-				075B914D1A3A5B4A0032D908 /* memory.cpp in Sources */,
 				07BC78371968AA9D00393657 /* base64.cpp in Sources */,
 				07F81472196E2AF300207EC1 /* RosterItem.mm in Sources */,
 				0715A63D195512A8004519D9 /* JID.cpp in Sources */,
@@ -1147,13 +1156,13 @@
 				071A76831A40B6B2006B41A8 /* uuid.cpp in Sources */,
 				071A76841A40B6BE006B41A8 /* Attribute.cpp in Sources */,
 				071A76881A40B6BE006B41A8 /* NamespaceableNode.cpp in Sources */,
+				073D2F2C1A41499A00E76071 /* shared_memory.cpp in Sources */,
 				071A768C1A40B6D5006B41A8 /* XMLStream.cpp in Sources */,
 				071A768E1A40B6D5006B41A8 /* XMLStream_Context.cpp in Sources */,
 				071A767B1A40B688006B41A8 /* base64.cpp in Sources */,
 				071A768A1A40B6BE006B41A8 /* TextNode.cpp in Sources */,
 				071A768D1A40B6D5006B41A8 /* XMLStream_Constants.cpp in Sources */,
 				071A766D1A40B333006B41A8 /* XMLNamespace.mm in Sources */,
-				071A76811A40B6A6006B41A8 /* memory.cpp in Sources */,
 				071A76721A40B333006B41A8 /* XMLTextNode.mm in Sources */,
 				071A76691A40B32D006B41A8 /* XMLStream.mm in Sources */,
 				071A76801A40B69F006B41A8 /* SRVRecordResolver_CFNetwork.cpp in Sources */,
@@ -1162,6 +1171,7 @@
 				071A76911A40B6ED006B41A8 /* Presence.cpp in Sources */,
 				071A76861A40B6BE006B41A8 /* NameableNode.cpp in Sources */,
 				071A76931A40B704006B41A8 /* Client.cpp in Sources */,
+				073D2F2B1A41499A00E76071 /* MemoryManager.cpp in Sources */,
 				071A768B1A40B6D5006B41A8 /* JID.cpp in Sources */,
 				071A76871A40B6BE006B41A8 /* Namespace.cpp in Sources */,
 				071A76891A40B6BE006B41A8 /* Node.cpp in Sources */,

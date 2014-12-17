@@ -9,7 +9,7 @@
 #pragma once
 
 #include <memory>
-#include "rambler/memory/RCAllocator.hpp"
+#include "rambler/memory/SharedMemoryAllocator.hpp"
 
 namespace rambler {
     namespace memory {
@@ -17,7 +17,7 @@ namespace rambler {
 
         template<typename T, typename... Args>
         StrongPointer<T> makeStrongPointer(Args... args) {
-            return std::allocate_shared<T>(RCAllocator<T>(), args...);
+            return std::allocate_shared<T>(SharedMemoryAllocator<T>(), args...);
         }
     }
 

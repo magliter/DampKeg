@@ -1,43 +1,43 @@
 /**************************************************************************************************
- * @file    rambler/memory/RCAllocator.hpp
- * @date    2014-12-12
+ * @file    rambler/memory/SharedMemoryAllocator.hpp
+ * @date    2014-12-16
  * @author  Omar Stefan Evans
- * @brief   <# Brief Description #>
- * @details <# Detailed Description #>
  **************************************************************************************************/
 
 #pragma once
 
 #include <limits>
-#include "memory.hpp"
+#include "rambler/memory/MemoryManager.hpp"
 
 namespace rambler { namespace memory {
 
     template <typename T>
-    class RCAllocator {
+    class SharedMemoryAllocator {
+    private:
+        MemoryManager * memory_manager;
     public:
         using value_type        = T;
         using pointer           = value_type *;
         using const_pointer     = const pointer;
         using reference         = value_type &;
         using const_reference   = const reference;
-        using size_type         = UInt;
-        using difference_type   = Int;
-        template< class U > struct rebind { typedef RCAllocator<U> other; };
+        using size_type         = size_t;
+        using difference_type   = ptrdiff_t;
+        template< class U > struct rebind { typedef SharedMemoryAllocator<U> other; };
 
-
-        RCAllocator() = default;
-        RCAllocator(const RCAllocator& other) = default;
+        SharedMemoryAllocator() : memory_manager(MemoryManager::default_manager()) {}
+        SharedMemoryAllocator(MemoryManager * mm) : memory_manager(mm) {}
+        SharedMemoryAllocator(const SharedMemoryAllocator & other) = default;
 
         template< class U >
-        RCAllocator(const RCAllocator<U>& other) {}
+        SharedMemoryAllocator(const SharedMemoryAllocator<U> & other) {}
 
         pointer allocate(size_type n, std::allocator<void>::const_pointer hint = 0) {
-            return static_cast<pointer>(memory::allocate(n, sizeof(value_type)));
+            return static_cast<pointer>(memory_manager->reserve_memory(n, sizeof(T)));
         }
 
         void deallocate(pointer p, size_type n) {
-            memory::release(p);
+            memory_manager->release_memory(p);
         }
 
         size_type max_size() const {
@@ -45,14 +45,14 @@ namespace rambler { namespace memory {
         }
 
         template< class U, class... Args >
-        void construct( U* p, Args&&... args ) {
+        void construct(U* p, Args &&... args) {
             ::new((void *)p) U(std::forward<Args>(args)...);
         }
-        
+
         template< class U >
-        void destroy( U* p ) {
+        void destroy(U * p) {
             p->~U();
         }
     };
-
+    
 }}
