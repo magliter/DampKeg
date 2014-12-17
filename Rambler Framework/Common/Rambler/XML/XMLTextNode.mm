@@ -1,6 +1,6 @@
 #/**********************************************************************************************************************
 * @file    Rambler/XML/XMLTextNode.mm
-* @date    2014-07-20
+* @date    2014-12-17
 * @brief   <# Brief Description #>
 * @details <# Detailed Description #>
 **********************************************************************************************************************/
@@ -42,7 +42,7 @@
 {
     String string = aString == nil ? String() : aString.UTF8String;
 
-    return [self initWithNativeObject:std::make_shared<XML::TextNode>(string)];
+    return [self initWithNativeObject:makeStrongPointer<XML::TextNode>(string)];
 }
 
 - (XMLElement *)parent

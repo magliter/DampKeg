@@ -1,6 +1,6 @@
 /**********************************************************************************************************************
  * @file    TCPConnection.mm
- * @date    2014-07-21
+ * @date    2014-12-17
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
  **********************************************************************************************************************/
@@ -36,7 +36,7 @@ using namespace rambler;
 - (instancetype)initWithDomainName:(NSString *)aDomainName serviceName:(NSString *)aServiceName
 {
 
-    return [self initWithNativeObject:std::make_shared<Connection::CFNetworkBasedTCPConnection>(aDomainName.UTF8String,
+    return [self initWithNativeObject:makeStrongPointer<Connection::CFNetworkBasedTCPConnection>(aDomainName.UTF8String,
                                                                                                 aServiceName.UTF8String)];
 }
 
