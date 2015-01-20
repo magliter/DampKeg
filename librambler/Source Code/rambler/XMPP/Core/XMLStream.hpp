@@ -69,7 +69,7 @@ namespace rambler { namespace XMPP { namespace Core {
          * Opens this XMLStream. Has no effect if this stream is not closed.
          * @return true on success, false on failure
          */
-        virtual bool open() override;
+        virtual void open() override;
 
         /**
          * Closes this XMLStream. Has no effect if this stream is closed.
@@ -84,7 +84,7 @@ namespace rambler { namespace XMPP { namespace Core {
          * @return true on success, false on failure.
          * @post   closes the stream on failure.
          */
-        virtual bool secure() override;
+        virtual void secure() override;
 
         void restart();
 

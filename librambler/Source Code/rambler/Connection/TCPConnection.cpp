@@ -9,12 +9,6 @@
 
 namespace rambler { namespace Connection {
 
-    TCPConnection::TCPConnection(String domainName, String serviceName)
-    : domainName(domainName), serviceName(serviceName)
-    {
-        /* Nothing to do here */
-    }
-
     void TCPConnection::handleOpeningFailedEvent()
     {
         this->close();
@@ -25,26 +19,6 @@ namespace rambler { namespace Connection {
     {
         this->close();
         BidirectionalStream<UInt8>::handleSecuringFailedEvent();
-    }
-
-    String TCPConnection::getDomainName() const
-    {
-        return domainName;
-    }
-
-    String TCPConnection::getServiceName() const
-    {
-        return serviceName;
-    }
-
-    String TCPConnection::getRemoteHostName() const
-    {
-        return remoteHostName;
-    }
-
-    UInt16 TCPConnection::getRemotePortNumber() const
-    {
-        return remotePortNumber;
     }
 
 }}

@@ -27,12 +27,12 @@ namespace rambler { namespace Stream {
         BidirectionalStream() = default;
         virtual ~BidirectionalStream() = default;
 		
-        virtual bool open() = 0;
-        virtual bool secure() = 0;
+        virtual void open() = 0;
+        virtual void secure() = 0;
         virtual void close() = 0;
         virtual void sendData(std::vector<T> const & data) = 0;
 
-        State getState() {
+        virtual State getState() {
             return state;
         }
 

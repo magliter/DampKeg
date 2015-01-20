@@ -44,10 +44,10 @@ namespace rambler { namespace XMPP { namespace Core {
         /* Cleanup goes here */
     }
 
-    bool XMLStream::open()
+    void XMLStream::open()
     {
         if (state != Stream::State::Closed) {
-            return false;
+            return;
         }
 
         state = Stream::State::Opening;
@@ -61,7 +61,7 @@ namespace rambler { namespace XMPP { namespace Core {
             connection = Connection::TCPConnection::nativeTCPConnection(jid->domainPart, "_xmpp-client");
         } else {
             state = Stream::State::Closed;
-            return false;
+            return;
         }
 
         /* connection != nullptr */
@@ -121,10 +121,10 @@ namespace rambler { namespace XMPP { namespace Core {
         state = Stream::State::Closed;
     }
 
-    bool XMLStream::secure()
+    void XMLStream::secure()
     {
         if (state != Stream::State::Open) {
-            return false;
+            return;
         }
 
         state = Stream::State::OpenAndSecuring;
@@ -138,13 +138,12 @@ namespace rambler { namespace XMPP { namespace Core {
             handleSecuredEvent();
         });
 
-        if (!connection->secure()) {
+        connection->setSecuringFailedEventHandler([this](){
             connection->close();
             connection = nullptr;
-            return false;
-        }
+        });
 
-        return true;
+        connection->secure();
     }
 
     void XMLStream::sendData(std::vector<UInt8> const & data)
@@ -253,9 +252,7 @@ namespace rambler { namespace XMPP { namespace Core {
             } else if (element->getName() == "presence") {
                 handlePresenceStanzaReceivedEvent(shared_from_this(), element);
             } else {
-#ifndef _MSC_VER
-#warning make a decision
-#endif
+                //TODO: Make a decision
                 //There's some error.
             }
         } else {
@@ -264,9 +261,7 @@ namespace rambler { namespace XMPP { namespace Core {
 
                 case Stream::State::OpenAndSecuredAndAuthenticated:
                     if (!context->sentBindRequest) {
-#ifndef _MSC_VER
-#warning assumes that binding is available/possible.  this should be checked first.
-#endif
+                        //FIXME: assumes that binding is available/possible.  this should be checked first.
                         context->sentBindRequest = true;
                         bind();
                     } else if (element->getName() == "iq"  && element->getAttribute("type")->getValue() == "result" ) {
@@ -291,9 +286,8 @@ namespace rambler { namespace XMPP { namespace Core {
 
 
                 case Stream::State::OpenAndSecured:
-#ifndef _MSC_VER
-#warning assumes SASL authentication is available.  should check first.
-#endif
+                    //FIXME: assumes SASL authentication is available.  should check first.
+
                     if (!context->sentAuth) {
                         while (!context->sentAuth) {
                             handleAuthenticationRequiredEvent(shared_from_this());

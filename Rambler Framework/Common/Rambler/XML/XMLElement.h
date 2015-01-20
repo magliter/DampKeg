@@ -52,6 +52,6 @@
 - (XMLElement *)lastElementWithName:(NSString *)aName xmlnamespace:(XMLNamespace *)aNamespace;
 - (XMLElement *)lastElementWithNamespace:(XMLNamespace *)aNamespace;
 
-#warning TODO: Add attribute properties/methods
+//TODO: Add attribute properties/methods
 
 @end

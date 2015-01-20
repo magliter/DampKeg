@@ -32,12 +32,7 @@ namespace rambler { namespace XML {
 
     String Attribute::getEscapedValue() const
     {
-#ifdef _MSC_VER
-#pragma message("TODO: Actually escape the value in rambler::XML::Attribute::getEscapedValue()")
-#else
-#warning TODO: Actually escape the value in rambler::XML::Attribute::getEscapedValue()
-#endif
-        //TODO: Actually escape the value
+        //TODO: Actually escape the value in rambler::XML::Attribute::getEscapedValue()
         return value;
     }
 

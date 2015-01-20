@@ -20,7 +20,7 @@ using namespace rambler;
 {
     self = [super init];
     if (self != nil) {
-#warning Implement this!
+        //TODO: Implement this!
         //Does nothing
     }
 
@@ -31,7 +31,7 @@ using namespace rambler;
 {
     self = [super init];
     if (self != nil) {
-#warning Implement this!
+        //TODO: Implement this!
         //Does nothing
     }
 
@@ -42,7 +42,7 @@ using namespace rambler;
 {
     self = [super init];
     if (self != nil) {
-#warning Implement this!
+        //TODO: Implement this!
         //Does nothing
     }
 
@@ -53,7 +53,7 @@ using namespace rambler;
 {
     self = [super init];
     if (self != nil) {
-#warning Implement this!
+        //TODO: Implement this!
         //Does nothing
     }
 
@@ -63,7 +63,7 @@ using namespace rambler;
 {
     self = [super init];
     if (self != nil) {
-#warning Implement this!
+        //TODO: Implement this!
         //Does nothing
     }
 
@@ -71,7 +71,7 @@ using namespace rambler;
 }
 
 
-- (BOOL)open{
+- (void)open{
     return _cpp_XMLStream->open();
 }
 

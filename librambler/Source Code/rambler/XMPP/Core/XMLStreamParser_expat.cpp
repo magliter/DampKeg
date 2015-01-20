@@ -55,7 +55,7 @@ namespace rambler { namespace XMPP { namespace Core {
 
     void XMLStreamParser_expat::handleElementStarted(void *userData, const XML_Char *nameData, const XML_Char **attributeData)
     {
-#warning TODO: Improve namespace handling
+        //TODO: Improve namespace handling
         if (!userData) {
             return;
         }
@@ -159,7 +159,6 @@ namespace rambler { namespace XMPP { namespace Core {
             parser->stream.lock()->handleReceivedXMLElementEvent(parser->topElement);
             parser->topElement = nullptr;
             parser->currentElement = parser->currentElement->getParent();
-#warning TODO: Remove child from current element (root) so that memory usage doesn't keep growing.
             //TODO: Remove child from current element (root) so that memory usage doesn't keep growing.
         } else {
             parser->currentElement = parser->currentElement->getParent();

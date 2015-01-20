@@ -17,8 +17,8 @@
 - (instancetype)initWithHostname:(NSString *)aHostname port:(UInt16)aPort;
 - (instancetype)initWithHostname:(NSString *)aHostname port:(UInt16)aPort jid:(JID *)aJID;
 
-- (BOOL)open;
-- (BOOL)secure;
+- (void)open;
+- (void)secure;
 - (void)close;
 
 - (void)sendData:(NSData *) data;
