@@ -67,7 +67,6 @@
 		0739C3E9195BB781006A7EA8 /* Attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0739C3E8195BB781006A7EA8 /* Attribute.cpp */; };
 		0739C3EC195BC68C006A7EA8 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0739C3EB195BC68C006A7EA8 /* Node.cpp */; };
 		0739C3F1195BE732006A7EA8 /* Namespace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0739C3F0195BE732006A7EA8 /* Namespace.cpp */; };
-		073A3FFB197CE6DE00DC670F /* XMLStreamParser_expat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F9232B196D12C30010E3C4 /* XMLStreamParser_expat.cpp */; };
 		073A3FFD197CFC0600DC670F /* rambler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 073A3FFC197CFC0600DC670F /* rambler.hpp */; };
 		073D2F261A41480700E76071 /* MemoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073D2F211A41480700E76071 /* MemoryManager.cpp */; };
 		073D2F271A41480700E76071 /* MemoryManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 073D2F221A41480700E76071 /* MemoryManager.hpp */; };
@@ -92,6 +91,7 @@
 		076FC726197789F90046A227 /* timestamp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076FC725197789F90046A227 /* timestamp.mm */; };
 		0772D5EB19837AA900AC399F /* Presence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0772D5EA19837AA900AC399F /* Presence.cpp */; };
 		07746CE719876FF700B27FFA /* Presence.h in Headers */ = {isa = PBXBuildFile; fileRef = 07921C8C19861D33008FCA3B /* Presence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077DDA2A1A76FC6000E22930 /* XMLStreamParser_expat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F9232B196D12C30010E3C4 /* XMLStreamParser_expat.cpp */; };
 		07921C8B19861D09008FCA3B /* Presence.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07921C8A19861D09008FCA3B /* Presence.mm */; };
 		079FDC321966514700F9DBC6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079FDC311966514700F9DBC6 /* Security.framework */; };
 		07A30662196F79B000D9523E /* RosterItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A3065D196F79B000D9523E /* RosterItem.cpp */; };
@@ -1187,7 +1187,6 @@
 				07D9D968197817DF0017D850 /* uuid.cpp in Sources */,
 				07E761FC197B852500CD1BDE /* XMLNamespace.mm in Sources */,
 				076FC726197789F90046A227 /* timestamp.mm in Sources */,
-				073A3FFB197CE6DE00DC670F /* XMLStreamParser_expat.cpp in Sources */,
 				07BEA8421A6F0AC7000F0013 /* TCPStream_NSStream.mm in Sources */,
 				07921C8B19861D09008FCA3B /* Presence.mm in Sources */,
 				07DD4CDD1A6B858C002AC300 /* RamblerTCPStreamDelegate.m in Sources */,
@@ -1222,6 +1221,7 @@
 				0739C3EC195BC68C006A7EA8 /* Node.cpp in Sources */,
 				07E761F7197B78D300CD1BDE /* XMLTextNode.mm in Sources */,
 				07333DED196A46BD0000D8F3 /* XMLStream_Context.cpp in Sources */,
+				077DDA2A1A76FC6000E22930 /* XMLStreamParser_expat.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

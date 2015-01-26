@@ -841,7 +841,7 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
             return nullptr;
         }
 
-        auto name = nameAttribute->getValue();
+        auto name = nameAttribute ? nameAttribute->getValue() : "";
 
         std::vector<String const> groups;
         for (auto groupElement : groupElements) {
