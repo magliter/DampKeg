@@ -460,12 +460,12 @@
 		0715A6351955021F004519D9 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
-				077DDA531A77C37E00E22930 /* TCPStream_CFNetwork.hpp */,
-				077DDA521A77C37E00E22930 /* TCPStream_CFNetwork.cpp */,
 				0715A6341954FF8E004519D9 /* BidirectionalStream.hpp */,
+				0715A63619550276004519D9 /* State.hpp */,
 				077DDA4D1A77C2DB00E22930 /* TCPStream.hpp */,
 				077DDA4C1A77C2DB00E22930 /* TCPStream.cpp */,
-				0715A63619550276004519D9 /* State.hpp */,
+				077DDA531A77C37E00E22930 /* TCPStream_CFNetwork.hpp */,
+				077DDA521A77C37E00E22930 /* TCPStream_CFNetwork.cpp */,
 			);
 			path = Stream;
 			sourceTree = "<group>";

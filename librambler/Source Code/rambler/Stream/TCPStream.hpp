@@ -14,7 +14,7 @@ namespace rambler { namespace Stream {
     /**
      * An abstract object representing a TCP stream
      * @author Omar Stefan Evans
-     * @date   2014-07-04
+     * @date   2015-01-27
      */
     class TCPStream : public Stream::BidirectionalStream<UInt8> {
     public:
