@@ -374,7 +374,7 @@ namespace rambler { namespace XMPP { namespace Core {
     void XMLStream::bind()
     {
         StrongPointer<XML::Element> iqElement = XML::Element::createWithName("iq");
-        iqElement->addAttribute("id", std::to_string(context->getID()));
+        iqElement->addAttribute("id", uuid::generate());
         iqElement->addAttribute("type", "set");
 
         StrongPointer<XML::Element> bindElement = XML::Element::createWithName("bind", Bind_Namespace);

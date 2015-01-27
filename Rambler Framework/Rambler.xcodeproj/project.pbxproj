@@ -54,14 +54,12 @@
 		071A768B1A40B6D5006B41A8 /* JID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0715A63C195512A8004519D9 /* JID.cpp */; };
 		071A768C1A40B6D5006B41A8 /* XMLStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0715A6321954FC82004519D9 /* XMLStream.cpp */; };
 		071A768D1A40B6D5006B41A8 /* XMLStream_Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DECDC61963C2F1007938D1 /* XMLStream_Constants.cpp */; };
-		071A768E1A40B6D5006B41A8 /* XMLStream_Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07333DEC196A46BD0000D8F3 /* XMLStream_Context.cpp */; };
 		071A768F1A40B6D5006B41A8 /* XMLStreamParser_libxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BF1F2919638F0700FC8348 /* XMLStreamParser_libxml2.cpp */; };
 		071A76901A40B6ED006B41A8 /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075097611973679400CBBA60 /* Message.cpp */; };
 		071A76911A40B6ED006B41A8 /* Presence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0772D5EA19837AA900AC399F /* Presence.cpp */; };
 		071A76921A40B6ED006B41A8 /* RosterItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A3065D196F79B000D9523E /* RosterItem.cpp */; };
 		071A76931A40B704006B41A8 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F36FDF197744E1001A00A0 /* Client.cpp */; };
 		071A76951A40C40D006B41A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E481A40AE1800DF46CE /* Security.framework */; };
-		07333DED196A46BD0000D8F3 /* XMLStream_Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07333DEC196A46BD0000D8F3 /* XMLStream_Context.cpp */; };
 		0739C3DA195B9D8F006A7EA8 /* types.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0739C3D9195B9D8F006A7EA8 /* types.hpp */; };
 		0739C3E9195BB781006A7EA8 /* Attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0739C3E8195BB781006A7EA8 /* Attribute.cpp */; };
 		0739C3EC195BC68C006A7EA8 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0739C3EB195BC68C006A7EA8 /* Node.cpp */; };
@@ -255,7 +253,6 @@
 		0715A63C195512A8004519D9 /* JID.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JID.cpp; sourceTree = "<group>"; };
 		0715A6CB19579204004519D9 /* CreateJIDFromStringTestCase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CreateJIDFromStringTestCase.mm; sourceTree = "<group>"; };
 		072EAA0E1973784D00B14A42 /* Message.internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.internal.h; sourceTree = "<group>"; };
-		07333DEC196A46BD0000D8F3 /* XMLStream_Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLStream_Context.cpp; sourceTree = "<group>"; };
 		0739C3D9195B9D8F006A7EA8 /* types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = types.hpp; sourceTree = "<group>"; };
 		0739C3E6195BA6D0006A7EA8 /* Element.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Element.hpp; sourceTree = "<group>"; };
 		0739C3E7195BB391006A7EA8 /* Attribute.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Attribute.hpp; sourceTree = "<group>"; };
@@ -434,7 +431,6 @@
 				0715A6301954FC6C004519D9 /* XMLStream.hpp */,
 				0715A6321954FC82004519D9 /* XMLStream.cpp */,
 				07DECDC61963C2F1007938D1 /* XMLStream_Constants.cpp */,
-				07333DEC196A46BD0000D8F3 /* XMLStream_Context.cpp */,
 				07F92325196D045F0010E3C4 /* XMLStreamParser.hpp */,
 				07F92317196CFA3B0010E3C4 /* XMLStreamParser_libxml2.hpp */,
 				07BF1F2919638F0700FC8348 /* XMLStreamParser_libxml2.cpp */,
@@ -1185,7 +1181,6 @@
 				07F36FE0197744E1001A00A0 /* Client.cpp in Sources */,
 				0739C3EC195BC68C006A7EA8 /* Node.cpp in Sources */,
 				07E761F7197B78D300CD1BDE /* XMLTextNode.mm in Sources */,
-				07333DED196A46BD0000D8F3 /* XMLStream_Context.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,7 +1204,6 @@
 				071A76881A40B6BE006B41A8 /* NamespaceableNode.cpp in Sources */,
 				073D2F2C1A41499A00E76071 /* shared_memory.cpp in Sources */,
 				071A768C1A40B6D5006B41A8 /* XMLStream.cpp in Sources */,
-				071A768E1A40B6D5006B41A8 /* XMLStream_Context.cpp in Sources */,
 				071A767B1A40B688006B41A8 /* base64.cpp in Sources */,
 				071A768A1A40B6BE006B41A8 /* TextNode.cpp in Sources */,
 				077DDA501A77C2E200E22930 /* TCPStream.cpp in Sources */,

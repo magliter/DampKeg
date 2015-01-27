@@ -128,9 +128,6 @@ namespace rambler { namespace XMPP { namespace Core {
             bool sentBindRequest             { false };
             bool boundToResource             { false };
             //std::list<String> saslMechanisms { "EXTERNAL", "PLAIN", "ANONYMOUS" };
-            UInt32 nextID                    { 1 };
-
-            UInt32 getID();
         };
 
         String getStreamHeader() const;
