@@ -1,22 +1,22 @@
-/**********************************************************************************************************************
- * @file    TCPConnection.hpp
+/**************************************************************************************************
+ * @file    TCPStream.hpp
  * @date    2014-07-04
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
- **********************************************************************************************************************/
+ **************************************************************************************************/
 
 #pragma once
 
 #include "rambler/Stream/BidirectionalStream.hpp"
 
-namespace rambler { namespace Connection {
+namespace rambler { namespace Stream {
 
     /**
      * An abstract object representing a TCP connection
      * @author Omar Stefan Evans
      * @date   2014-07-04
      */
-    class TCPConnection : public Stream::BidirectionalStream<UInt8> {
+    class TCPStream : public Stream::BidirectionalStream<UInt8> {
     public:
 
         /**
@@ -28,13 +28,13 @@ namespace rambler { namespace Connection {
          * @param   serviceName either a service name for a SRV lookup or a port number
          * @return  a strong pointer to a "native" TCP connection object
          */
-        static StrongPointer<TCPConnection> nativeTCPConnection(String domainName, String serviceName);
+        static StrongPointer<TCPStream> nativeTCPStream(String domainName, String serviceName);
 
         /**
          * Destructor
          * @details The destructor in subclasses should close the connection if it is not already closed.
          */
-        virtual ~TCPConnection() = default;
+        virtual ~TCPStream() = default;
 
         /**
          * Called when open() fails.

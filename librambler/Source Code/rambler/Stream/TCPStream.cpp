@@ -1,21 +1,21 @@
 /**********************************************************************************************************************
- * @file    TCPConnection.cpp
+ * @file    TCPStream.cpp
  * @date    2014-07-04
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
  **********************************************************************************************************************/
 
-#include "rambler/Connection/TCPConnection.hpp"
+#include "rambler/Stream/TCPStream.hpp"
 
-namespace rambler { namespace Connection {
+namespace rambler { namespace Stream {
 
-    void TCPConnection::handleOpeningFailedEvent()
+    void TCPStream::handleOpeningFailedEvent()
     {
         this->close();
         BidirectionalStream<UInt8>::handleOpeningFailedEvent();
     }
 
-    void TCPConnection::handleSecuringFailedEvent()
+    void TCPStream::handleSecuringFailedEvent()
     {
         this->close();
         BidirectionalStream<UInt8>::handleSecuringFailedEvent();

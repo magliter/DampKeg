@@ -53,37 +53,37 @@ namespace rambler { namespace XMPP { namespace Core {
         state = Stream::State::Opening;
         if (host != "") {
             if (port != 0) {
-                connection = Connection::TCPConnection::nativeTCPConnection(host, std::to_string(port));
+                stream = Stream::TCPStream::nativeTCPStream(host, std::to_string(port));
             } else {
-                connection = Connection::TCPConnection::nativeTCPConnection(host, "_xmpp-client");
+                stream = Stream::TCPStream::nativeTCPStream(host, "_xmpp-client");
             }
         } else if (jid != nullptr) {
-            connection = Connection::TCPConnection::nativeTCPConnection(jid->domainPart, "_xmpp-client");
+            stream = Stream::TCPStream::nativeTCPStream(jid->domainPart, "_xmpp-client");
         } else {
             state = Stream::State::Closed;
             return;
         }
 
-        /* connection != nullptr */
+        /* stream != nullptr */
 
-        assert(connection != nullptr);
+        assert(stream != nullptr);
 
-        /* set connection's event handlers */
+        /* set stream's event handlers */
 
-        connection->setOpenedEventHandler([this]() {
+        stream->setOpenedEventHandler([this]() {
             state = Stream::State::Open;
             restart();
 
             handleOpenedEvent();
         });
 
-        connection->setOpeningFailedEventHandler([this]() {
+        stream->setOpeningFailedEventHandler([this]() {
             state = Stream::State::Closed;
 
             handleOpeningFailedEvent();
         });
 
-        connection->setHasDataEventHandler([this](std::vector<UInt8> data) {
+        stream->setHasDataEventHandler([this](std::vector<UInt8> data) {
 
             std::cout << "\n\nReceived:\n" << String(data.begin(), data.end()) << std::endl;
 
@@ -95,7 +95,7 @@ namespace rambler { namespace XMPP { namespace Core {
 
         });
 
-        return connection->open();
+        return stream->open();
     }
 
     void XMLStream::restart()
@@ -110,9 +110,9 @@ namespace rambler { namespace XMPP { namespace Core {
     {
         state = Stream::State::Closed;
 
-        if (connection) {
+        if (stream) {
             sendData("</stream>");
-            connection->close();
+            stream->close();
         }
 
         parser = nullptr;
@@ -129,24 +129,24 @@ namespace rambler { namespace XMPP { namespace Core {
 
         parser = nullptr;
 
-        connection->setSecuredEventHandler([this]() {
+        stream->setSecuredEventHandler([this]() {
             state = Stream::State::OpenAndSecured;
             restart();
 
             handleSecuredEvent();
         });
 
-        connection->setSecuringFailedEventHandler([this](){
-            connection->close();
-            connection = nullptr;
+        stream->setSecuringFailedEventHandler([this](){
+            stream->close();
+            stream = nullptr;
         });
 
-        connection->secure();
+        stream->secure();
     }
 
     void XMLStream::sendData(std::vector<UInt8> const & data)
     {
-        connection->sendData(data);
+        stream->sendData(data);
     }
 
     void XMLStream::sendData(StrongPointer<XML::Element> const & data)
@@ -189,8 +189,8 @@ namespace rambler { namespace XMPP { namespace Core {
     String XMLStream::getStreamHeader() const
     {
         return "<?xml version='1.0'?>"
-                             "<stream:stream to='" + connection->getDomainName() +
-                             (connection->getState() == Stream::State::OpenAndSecured ? "' from='" + jid->description : "") +
+                             "<stream:stream to='" + stream->getDomainName() +
+                             (stream->getState() == Stream::State::OpenAndSecured ? "' from='" + jid->description : "") +
                              "' version='1.0'"
                              " xml:lang='en'"
                              " xmlns='jabber:client'"

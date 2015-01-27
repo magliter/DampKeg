@@ -10,7 +10,7 @@
 #include "rambler/types.hpp"
 
 #include "rambler/Stream/BidirectionalStream.hpp"
-#include "rambler/Connection/TCPConnection.hpp"
+#include "rambler/Stream/TCPStream.hpp"
 
 #include "rambler/XMPP/Core/JID.hpp"
 #include "rambler/XML/Element.hpp"
@@ -143,7 +143,7 @@ namespace rambler { namespace XMPP { namespace Core {
         String host;
         UInt16 port;
 
-        StrongPointer<Connection::TCPConnection> connection;
+        StrongPointer<Stream::TCPStream> stream;
         StrongPointer<Context> context;
         StrongPointer<XMLStreamParser> parser;
 

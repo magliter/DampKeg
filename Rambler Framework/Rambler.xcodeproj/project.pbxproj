@@ -40,7 +40,6 @@
 		071A76771A40B339006B41A8 /* StreamState.h in Headers */ = {isa = PBXBuildFile; fileRef = 070B9764197F6E3900873940 /* StreamState.h */; };
 		071A76781A40B339006B41A8 /* TCPConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F8147F196E2B1C00207EC1 /* TCPConnection.h */; };
 		071A767B1A40B688006B41A8 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC78361968AA9D00393657 /* base64.cpp */; };
-		071A767E1A40B694006B41A8 /* TCPConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DECDCC196414AC007938D1 /* TCPConnection.cpp */; };
 		071A767F1A40B69F006B41A8 /* dns_utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D5DCC91950B2110041A7F3 /* dns_utilities.cpp */; };
 		071A76801A40B69F006B41A8 /* SRVRecordResolver_CFNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D5DCCB1950B2110041A7F3 /* SRVRecordResolver_CFNetwork.cpp */; };
 		071A76821A40B6AD006B41A8 /* timestamp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076FC725197789F90046A227 /* timestamp.mm */; };
@@ -92,6 +91,10 @@
 		0772D5EB19837AA900AC399F /* Presence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0772D5EA19837AA900AC399F /* Presence.cpp */; };
 		07746CE719876FF700B27FFA /* Presence.h in Headers */ = {isa = PBXBuildFile; fileRef = 07921C8C19861D33008FCA3B /* Presence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077DDA491A7793FF00E22930 /* XMLStreamParser_libxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BF1F2919638F0700FC8348 /* XMLStreamParser_libxml2.cpp */; };
+		077DDA4E1A77C2DB00E22930 /* TCPStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 077DDA4C1A77C2DB00E22930 /* TCPStream.cpp */; };
+		077DDA501A77C2E200E22930 /* TCPStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 077DDA4C1A77C2DB00E22930 /* TCPStream.cpp */; };
+		077DDA541A77C37E00E22930 /* TCPStream_CFNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 077DDA521A77C37E00E22930 /* TCPStream_CFNetwork.cpp */; };
+		077DDA561A77C38B00E22930 /* TCPStream_CFNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 077DDA521A77C37E00E22930 /* TCPStream_CFNetwork.cpp */; };
 		07921C8B19861D09008FCA3B /* Presence.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07921C8A19861D09008FCA3B /* Presence.mm */; };
 		079FDC321966514700F9DBC6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079FDC311966514700F9DBC6 /* Security.framework */; };
 		07A30662196F79B000D9523E /* RosterItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A3065D196F79B000D9523E /* RosterItem.cpp */; };
@@ -103,18 +106,7 @@
 		07BC431E197FDBF500FFFAFB /* SubscriptionState.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A3066A197075E600D9523E /* SubscriptionState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07BC78371968AA9D00393657 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC78361968AA9D00393657 /* base64.cpp */; };
 		07BC78441968C1D400393657 /* Base64.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07BC78431968C1D400393657 /* Base64.mm */; };
-		07BEA8371A6CEF47000F0013 /* RamblerInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BEA8351A6CEF47000F0013 /* RamblerInputStream.h */; };
-		07BEA8381A6CEF47000F0013 /* RamblerInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA8361A6CEF47000F0013 /* RamblerInputStream.m */; };
-		07BEA83B1A6CEF91000F0013 /* RamblerOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BEA8391A6CEF91000F0013 /* RamblerOutputStream.h */; };
-		07BEA83C1A6CEF91000F0013 /* RamblerOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA83A1A6CEF91000F0013 /* RamblerOutputStream.m */; };
-		07BEA8411A6F0AC7000F0013 /* TCPStream_NSStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07BEA83F1A6F0AC7000F0013 /* TCPStream_NSStream.hpp */; };
-		07BEA8421A6F0AC7000F0013 /* TCPStream_NSStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA8401A6F0AC7000F0013 /* TCPStream_NSStream.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		07BEA8431A6F0DD8000F0013 /* TCPStream_NSStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA8401A6F0AC7000F0013 /* TCPStream_NSStream.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07BEA8451A6F0E71000F0013 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BEA8441A6F0E71000F0013 /* CFNetwork.framework */; };
-		07BEA8461A6F0E96000F0013 /* RamblerInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA8361A6CEF47000F0013 /* RamblerInputStream.m */; };
-		07BEA8471A6F0E96000F0013 /* RamblerOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA83A1A6CEF91000F0013 /* RamblerOutputStream.m */; };
-		07BEA8481A6F0E96000F0013 /* RamblerTCPStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DD4CD51A6B79D0002AC300 /* RamblerTCPStream.mm */; };
-		07BEA8491A6F0E96000F0013 /* RamblerTCPStreamDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DD4CDB1A6B858C002AC300 /* RamblerTCPStreamDelegate.m */; };
 		07D1E6DB1950A833008C76CF /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1E6CF1950A833008C76CF /* Rambler.framework */; };
 		07D1E6F11950A907008C76CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1E6F01950A907008C76CF /* Foundation.framework */; };
 		07D5DCCD1950B2110041A7F3 /* dns_utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D5DCC91950B2110041A7F3 /* dns_utilities.cpp */; };
@@ -124,17 +116,13 @@
 		07D5DD301950B6670041A7F3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D5DD2F1950B6670041A7F3 /* libxml2.dylib */; };
 		07D9D968197817DF0017D850 /* uuid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D9D967197817DF0017D850 /* uuid.cpp */; };
 		07DD4CD01A6B6A19002AC300 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DD4CCF1A6B6A19002AC300 /* CFNetwork.framework */; };
-		07DD4CD61A6B79D0002AC300 /* RamblerTCPStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DD4CD41A6B79D0002AC300 /* RamblerTCPStream.h */; };
-		07DD4CD71A6B79D0002AC300 /* RamblerTCPStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DD4CD51A6B79D0002AC300 /* RamblerTCPStream.mm */; };
 		07DD4CDC1A6B858C002AC300 /* RamblerTCPStreamDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DD4CDA1A6B858C002AC300 /* RamblerTCPStreamDelegate.h */; };
-		07DD4CDD1A6B858C002AC300 /* RamblerTCPStreamDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DD4CDB1A6B858C002AC300 /* RamblerTCPStreamDelegate.m */; };
 		07DE4E321A40ADBE00DF46CE /* Rambler.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DE4E311A40ADBE00DF46CE /* Rambler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07DE4E381A40ADBE00DF46CE /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E2D1A40ADBE00DF46CE /* Rambler.framework */; };
 		07DE4E3F1A40ADBE00DF46CE /* Rambler_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE4E3E1A40ADBE00DF46CE /* Rambler_iOSTests.m */; };
 		07DE4E471A40AE1300DF46CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E461A40AE1300DF46CE /* Foundation.framework */; };
 		07DE4E4B1A40AE2800DF46CE /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E4A1A40AE2800DF46CE /* libxml2.dylib */; };
 		07DECDC71963C2F1007938D1 /* XMLStream_Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DECDC61963C2F1007938D1 /* XMLStream_Constants.cpp */; };
-		07DECDCD196414AC007938D1 /* TCPConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DECDCC196414AC007938D1 /* TCPConnection.cpp */; };
 		07E761F2197B77DD00CD1BDE /* XMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E761F1197B76DD00CD1BDE /* XMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E761F7197B78D300CD1BDE /* XMLTextNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E761F6197B78D300CD1BDE /* XMLTextNode.mm */; };
 		07E761FC197B852500CD1BDE /* XMLNamespace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E761FB197B852500CD1BDE /* XMLNamespace.mm */; };
@@ -305,6 +293,10 @@
 		076FC725197789F90046A227 /* timestamp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = timestamp.mm; sourceTree = "<group>"; };
 		0772D5E91983770200AC399F /* Presence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Presence.hpp; sourceTree = "<group>"; };
 		0772D5EA19837AA900AC399F /* Presence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Presence.cpp; sourceTree = "<group>"; };
+		077DDA4C1A77C2DB00E22930 /* TCPStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TCPStream.cpp; sourceTree = "<group>"; };
+		077DDA4D1A77C2DB00E22930 /* TCPStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TCPStream.hpp; sourceTree = "<group>"; };
+		077DDA521A77C37E00E22930 /* TCPStream_CFNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TCPStream_CFNetwork.cpp; sourceTree = "<group>"; };
+		077DDA531A77C37E00E22930 /* TCPStream_CFNetwork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TCPStream_CFNetwork.hpp; sourceTree = "<group>"; };
 		07921C8A19861D09008FCA3B /* Presence.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Presence.mm; sourceTree = "<group>"; };
 		07921C8C19861D33008FCA3B /* Presence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presence.h; sourceTree = "<group>"; };
 		07921C8D19861D41008FCA3B /* Presence.internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presence.internal.h; sourceTree = "<group>"; };
@@ -320,14 +312,6 @@
 		07BC78361968AA9D00393657 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
 		07BC78421968AAFE00393657 /* base64.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base64.hpp; sourceTree = "<group>"; };
 		07BC78431968C1D400393657 /* Base64.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Base64.mm; sourceTree = "<group>"; };
-		07BEA8351A6CEF47000F0013 /* RamblerInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RamblerInputStream.h; sourceTree = "<group>"; };
-		07BEA8361A6CEF47000F0013 /* RamblerInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RamblerInputStream.m; sourceTree = "<group>"; };
-		07BEA8391A6CEF91000F0013 /* RamblerOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RamblerOutputStream.h; sourceTree = "<group>"; };
-		07BEA83A1A6CEF91000F0013 /* RamblerOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RamblerOutputStream.m; sourceTree = "<group>"; };
-		07BEA83D1A6CF2BF000F0013 /* RamblerInputStream.internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RamblerInputStream.internal.h; sourceTree = "<group>"; };
-		07BEA83E1A6D77E2000F0013 /* RamblerOutputStream.internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RamblerOutputStream.internal.h; sourceTree = "<group>"; };
-		07BEA83F1A6F0AC7000F0013 /* TCPStream_NSStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TCPStream_NSStream.hpp; sourceTree = "<group>"; };
-		07BEA8401A6F0AC7000F0013 /* TCPStream_NSStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TCPStream_NSStream.mm; sourceTree = "<group>"; };
 		07BEA8441A6F0E71000F0013 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		07BF1F2919638F0700FC8348 /* XMLStreamParser_libxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLStreamParser_libxml2.cpp; sourceTree = "<group>"; };
 		07D1E6CF1950A833008C76CF /* Rambler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rambler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -360,8 +344,6 @@
 		07DE4E481A40AE1800DF46CE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		07DE4E4A1A40AE2800DF46CE /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
 		07DECDC61963C2F1007938D1 /* XMLStream_Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLStream_Constants.cpp; sourceTree = "<group>"; };
-		07DECDCB19641495007938D1 /* TCPConnection.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TCPConnection.hpp; sourceTree = "<group>"; };
-		07DECDCC196414AC007938D1 /* TCPConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TCPConnection.cpp; sourceTree = "<group>"; };
 		07E761F1197B76DD00CD1BDE /* XMLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLNode.h; sourceTree = "<group>"; };
 		07E761F4197B789700CD1BDE /* XMLTextNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLTextNode.h; sourceTree = "<group>"; };
 		07E761F5197B78B100CD1BDE /* XMLTextNode.internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLTextNode.internal.h; sourceTree = "<group>"; };
@@ -482,7 +464,11 @@
 		0715A6351955021F004519D9 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				077DDA531A77C37E00E22930 /* TCPStream_CFNetwork.hpp */,
+				077DDA521A77C37E00E22930 /* TCPStream_CFNetwork.cpp */,
 				0715A6341954FF8E004519D9 /* BidirectionalStream.hpp */,
+				077DDA4D1A77C2DB00E22930 /* TCPStream.hpp */,
+				077DDA4C1A77C2DB00E22930 /* TCPStream.cpp */,
 				0715A63619550276004519D9 /* State.hpp */,
 			);
 			path = Stream;
@@ -681,7 +667,6 @@
 				0739C3EF195BE5D4006A7EA8 /* string_types.hpp */,
 				0739C3D9195B9D8F006A7EA8 /* types.hpp */,
 				073A3FF8197CE4F100DC670F /* base64 */,
-				07D5DCB51950B18D0041A7F3 /* Connection */,
 				07D5DCC81950B1F00041A7F3 /* DNS */,
 				075B91491A3A5AFA0032D908 /* memory */,
 				0715A6351955021F004519D9 /* Stream */,
@@ -786,17 +771,6 @@
 			path = "Source Code";
 			sourceTree = "<group>";
 		};
-		07D5DCB51950B18D0041A7F3 /* Connection */ = {
-			isa = PBXGroup;
-			children = (
-				07BEA83F1A6F0AC7000F0013 /* TCPStream_NSStream.hpp */,
-				07BEA8401A6F0AC7000F0013 /* TCPStream_NSStream.mm */,
-				07DECDCB19641495007938D1 /* TCPConnection.hpp */,
-				07DECDCC196414AC007938D1 /* TCPConnection.cpp */,
-			);
-			path = Connection;
-			sourceTree = "<group>";
-		};
 		07D5DCC81950B1F00041A7F3 /* DNS */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,12 +785,6 @@
 		07DD4CD31A6B79A9002AC300 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
-				07BEA8351A6CEF47000F0013 /* RamblerInputStream.h */,
-				07BEA83D1A6CF2BF000F0013 /* RamblerInputStream.internal.h */,
-				07BEA8361A6CEF47000F0013 /* RamblerInputStream.m */,
-				07BEA8391A6CEF91000F0013 /* RamblerOutputStream.h */,
-				07BEA83E1A6D77E2000F0013 /* RamblerOutputStream.internal.h */,
-				07BEA83A1A6CEF91000F0013 /* RamblerOutputStream.m */,
 				07DD4CD81A6B7A75002AC300 /* RamblerStreamStatus.h */,
 				07DD4CD41A6B79D0002AC300 /* RamblerTCPStream.h */,
 				07DD4CD91A6B7DB7002AC300 /* RamblerTCPStream.internal.h */,
@@ -919,14 +887,12 @@
 				0715A6311954FC6C004519D9 /* XMLStream.hpp in Headers */,
 				07F81483196E2B1C00207EC1 /* TCPConnection.h in Headers */,
 				07F8146F196E2AF300207EC1 /* Message.h in Headers */,
-				07BEA8411A6F0AC7000F0013 /* TCPStream_NSStream.hpp in Headers */,
 				07A30663196F79B000D9523E /* RosterItem.hpp in Headers */,
 				075B91581A3ABEB90032D908 /* XMLStream.h in Headers */,
 				075B91551A3ABEB90032D908 /* JID.h in Headers */,
 				075B915D1A3AC22E0032D908 /* StrongPointer.hpp in Headers */,
 				07F81471196E2AF300207EC1 /* RosterItem.h in Headers */,
 				073D2F291A41480700E76071 /* shared_memory.h in Headers */,
-				07DD4CD61A6B79D0002AC300 /* RamblerTCPStream.h in Headers */,
 				073D2F2A1A41480700E76071 /* SharedMemoryAllocator.hpp in Headers */,
 				07D5DCD01950B2110041A7F3 /* SRVRecordResolver_CFNetwork.h in Headers */,
 				07E761FD197B8A5700CD1BDE /* XMLNameableNode.h in Headers */,
@@ -936,9 +902,7 @@
 				07E76205197C6EBC00CD1BDE /* XMLElement.h in Headers */,
 				07F81481196E2B1C00207EC1 /* Connection.h in Headers */,
 				07E761F2197B77DD00CD1BDE /* XMLNode.h in Headers */,
-				07BEA8371A6CEF47000F0013 /* RamblerInputStream.h in Headers */,
 				07E76206197C6EC500CD1BDE /* XMLNamespaceableNode.h in Headers */,
-				07BEA83B1A6CEF91000F0013 /* RamblerOutputStream.h in Headers */,
 				07E761FF197B8A5700CD1BDE /* XMLTextNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1195,29 +1159,25 @@
 				07D9D968197817DF0017D850 /* uuid.cpp in Sources */,
 				07E761FC197B852500CD1BDE /* XMLNamespace.mm in Sources */,
 				076FC726197789F90046A227 /* timestamp.mm in Sources */,
-				07BEA8421A6F0AC7000F0013 /* TCPStream_NSStream.mm in Sources */,
 				07921C8B19861D09008FCA3B /* Presence.mm in Sources */,
-				07DD4CDD1A6B858C002AC300 /* RamblerTCPStreamDelegate.m in Sources */,
 				075097621973679400CBBA60 /* Message.cpp in Sources */,
 				07DECDC71963C2F1007938D1 /* XMLStream_Constants.cpp in Sources */,
 				07ABAA0B1960B0EF001543FB /* TextNode.cpp in Sources */,
 				073D2F281A41480700E76071 /* shared_memory.cpp in Sources */,
 				0739C3F1195BE732006A7EA8 /* Namespace.cpp in Sources */,
+				077DDA4E1A77C2DB00E22930 /* TCPStream.cpp in Sources */,
 				07D5DCCF1950B2110041A7F3 /* SRVRecordResolver_CFNetwork.cpp in Sources */,
 				075B91571A3ABEB90032D908 /* JID.mm in Sources */,
-				07DD4CD71A6B79D0002AC300 /* RamblerTCPStream.mm in Sources */,
 				070B975C197F667400873940 /* Client.mm in Sources */,
 				07E76204197C6E2400CD1BDE /* XMLElement.mm in Sources */,
 				0747F28F19608DCB003A0D0C /* NamespaceableNode.cpp in Sources */,
 				07F81470196E2AF300207EC1 /* Message.mm in Sources */,
-				07BEA83C1A6CEF91000F0013 /* RamblerOutputStream.m in Sources */,
 				075B91591A3ABEB90032D908 /* XMLStream.mm in Sources */,
+				077DDA541A77C37E00E22930 /* TCPStream_CFNetwork.cpp in Sources */,
 				0715A6331954FC82004519D9 /* XMLStream.cpp in Sources */,
-				07BEA8381A6CEF47000F0013 /* RamblerInputStream.m in Sources */,
 				0772D5EB19837AA900AC399F /* Presence.cpp in Sources */,
 				07D5DCCD1950B2110041A7F3 /* dns_utilities.cpp in Sources */,
 				0739C3E9195BB781006A7EA8 /* Attribute.cpp in Sources */,
-				07DECDCD196414AC007938D1 /* TCPConnection.cpp in Sources */,
 				07ABA9FE1960A8A4001543FB /* Element.cpp in Sources */,
 				07A30662196F79B000D9523E /* RosterItem.cpp in Sources */,
 				073D2F261A41480700E76071 /* MemoryManager.cpp in Sources */,
@@ -1255,19 +1215,17 @@
 				071A768C1A40B6D5006B41A8 /* XMLStream.cpp in Sources */,
 				071A768E1A40B6D5006B41A8 /* XMLStream_Context.cpp in Sources */,
 				071A767B1A40B688006B41A8 /* base64.cpp in Sources */,
-				07BEA8431A6F0DD8000F0013 /* TCPStream_NSStream.mm in Sources */,
 				071A768A1A40B6BE006B41A8 /* TextNode.cpp in Sources */,
+				077DDA501A77C2E200E22930 /* TCPStream.cpp in Sources */,
 				071A768D1A40B6D5006B41A8 /* XMLStream_Constants.cpp in Sources */,
-				07BEA8461A6F0E96000F0013 /* RamblerInputStream.m in Sources */,
 				071A766D1A40B333006B41A8 /* XMLNamespace.mm in Sources */,
 				071A76721A40B333006B41A8 /* XMLTextNode.mm in Sources */,
 				071A76691A40B32D006B41A8 /* XMLStream.mm in Sources */,
 				071A76801A40B69F006B41A8 /* SRVRecordResolver_CFNetwork.cpp in Sources */,
 				071A767F1A40B69F006B41A8 /* dns_utilities.cpp in Sources */,
 				071A768F1A40B6D5006B41A8 /* XMLStreamParser_libxml2.cpp in Sources */,
-				07BEA8471A6F0E96000F0013 /* RamblerOutputStream.m in Sources */,
+				077DDA561A77C38B00E22930 /* TCPStream_CFNetwork.cpp in Sources */,
 				071A76911A40B6ED006B41A8 /* Presence.cpp in Sources */,
-				07BEA8481A6F0E96000F0013 /* RamblerTCPStream.mm in Sources */,
 				071A76861A40B6BE006B41A8 /* NameableNode.cpp in Sources */,
 				071A76931A40B704006B41A8 /* Client.cpp in Sources */,
 				073D2F2B1A41499A00E76071 /* MemoryManager.cpp in Sources */,
@@ -1279,10 +1237,8 @@
 				071A76901A40B6ED006B41A8 /* Message.cpp in Sources */,
 				071A765D1A40B329006B41A8 /* Message.mm in Sources */,
 				071A76601A40B329006B41A8 /* Presence.mm in Sources */,
-				07BEA8491A6F0E96000F0013 /* RamblerTCPStreamDelegate.m in Sources */,
 				071A76821A40B6AD006B41A8 /* timestamp.mm in Sources */,
 				071A76751A40B333006B41A8 /* XMLElement.mm in Sources */,
-				071A767E1A40B694006B41A8 /* TCPConnection.cpp in Sources */,
 				071A76631A40B329006B41A8 /* RosterItem.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
