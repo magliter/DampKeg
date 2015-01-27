@@ -1,9 +1,9 @@
-/**********************************************************************************************************************
+/**************************************************************************************************
  * @file    TCPStream_CFNetwork.hpp
  * @date    2015-01-27
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
- **********************************************************************************************************************/
+ **************************************************************************************************/
 
 #pragma once
 
@@ -67,7 +67,7 @@ namespace rambler { namespace Stream {
         /**
          * Sends data over this stream
          * @author  Omar Stefan Evans
-         * @date    2014-07-03
+         * @date    2015-01-27
          * @param   data the data to send
          */
         virtual void sendData(std::vector<UInt8> const & data) override;
@@ -112,15 +112,15 @@ namespace rambler { namespace Stream {
         /**
          * For internal use only!
          * @author  Omar Stefan Evans
-         * @date    2014-07-03
-         * @details Use this to read data when this connection is open (but not secured).
+         * @date    2015-01-27
+         * @details Use this to read data when this stream is open (but not secured).
          * @return  the data that was read
          */
         std::vector<UInt8> readData();
 
         /**
          * For internal use only!
-         * @details Use this to read data when this connection is open and secured.
+         * @details Use this to read data when this stream is open and secured.
          * @return  the data that was read
          */
         std::vector<UInt8> readDataSecurely();
@@ -128,8 +128,8 @@ namespace rambler { namespace Stream {
         /**
          * For internal use only!
          * @author  Omar Stefan Evans
-         * @date    2014-07-03
-         * @details Use this to write data when this connection is open (but not secured).
+         * @date    2015-01-27
+         * @details Use this to write data when this stream is open (but not secured).
          * @param   data the data to write
          */
         void writeData(std::vector<UInt8> const & data);
@@ -137,8 +137,8 @@ namespace rambler { namespace Stream {
         /**
          * For internal use only!
          * @author  Omar Stefan Evans
-         * @date    2014-07-03
-         * @details Use this to write data when this connection is open and secured.
+         * @date    2015-01-27
+         * @details Use this to write data when this stream is open and secured.
          * @param   data the data to write
          */
         void writeDataSecurely(std::vector<UInt8> const & data);

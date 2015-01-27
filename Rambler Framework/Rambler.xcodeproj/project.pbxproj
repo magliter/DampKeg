@@ -106,7 +106,6 @@
 		07BC431E197FDBF500FFFAFB /* SubscriptionState.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A3066A197075E600D9523E /* SubscriptionState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07BC78371968AA9D00393657 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BC78361968AA9D00393657 /* base64.cpp */; };
 		07BC78441968C1D400393657 /* Base64.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07BC78431968C1D400393657 /* Base64.mm */; };
-		07BEA8451A6F0E71000F0013 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BEA8441A6F0E71000F0013 /* CFNetwork.framework */; };
 		07D1E6DB1950A833008C76CF /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1E6CF1950A833008C76CF /* Rambler.framework */; };
 		07D1E6F11950A907008C76CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1E6F01950A907008C76CF /* Foundation.framework */; };
 		07D5DCCD1950B2110041A7F3 /* dns_utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D5DCC91950B2110041A7F3 /* dns_utilities.cpp */; };
@@ -115,7 +114,6 @@
 		07D5DCD01950B2110041A7F3 /* SRVRecordResolver_CFNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D5DCCC1950B2110041A7F3 /* SRVRecordResolver_CFNetwork.h */; };
 		07D5DD301950B6670041A7F3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D5DD2F1950B6670041A7F3 /* libxml2.dylib */; };
 		07D9D968197817DF0017D850 /* uuid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D9D967197817DF0017D850 /* uuid.cpp */; };
-		07DD4CD01A6B6A19002AC300 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DD4CCF1A6B6A19002AC300 /* CFNetwork.framework */; };
 		07DD4CDC1A6B858C002AC300 /* RamblerTCPStreamDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DD4CDA1A6B858C002AC300 /* RamblerTCPStreamDelegate.h */; };
 		07DE4E321A40ADBE00DF46CE /* Rambler.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DE4E311A40ADBE00DF46CE /* Rambler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07DE4E381A40ADBE00DF46CE /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E2D1A40ADBE00DF46CE /* Rambler.framework */; };
@@ -386,7 +384,6 @@
 			files = (
 				07D5DD301950B6670041A7F3 /* libxml2.dylib in Frameworks */,
 				07D1E6F11950A907008C76CF /* Foundation.framework in Frameworks */,
-				07DD4CD01A6B6A19002AC300 /* CFNetwork.framework in Frameworks */,
 				079FDC321966514700F9DBC6 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +402,6 @@
 			files = (
 				07DE4E4B1A40AE2800DF46CE /* libxml2.dylib in Frameworks */,
 				07DE4E471A40AE1300DF46CE /* Foundation.framework in Frameworks */,
-				07BEA8451A6F0E71000F0013 /* CFNetwork.framework in Frameworks */,
 				071A76951A40C40D006B41A8 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
