@@ -1,9 +1,9 @@
-/**********************************************************************************************************************
+/**************************************************************************************************
  * @file    rambler/XMPP/Core/XMLStreamParser_libxml2.hpp
- * @date    2014-07-09
+ * @date    2015-01-27
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
- **********************************************************************************************************************/
+ **************************************************************************************************/
 
 #pragma once
 
@@ -42,10 +42,14 @@ namespace rambler { namespace XMPP { namespace Core {
                                const xmlChar * ch,
                                int len);
 
+        static void handleEndSimple(void *ctx, const xmlChar * name);
+        static void handleStartSimple(void * ctx, const xmlChar * name, const xmlChar ** atts);
+
         StrongPointer<XML::Element> rootElement;
         StrongPointer<XML::Element> topElement;
         StrongPointer<XML::Element> currentElement;
         xmlSAXHandler *saxHandler;
+        xmlParserCtxt *parserContext;
         Int depth { -1 };
 
     };

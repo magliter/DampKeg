@@ -108,7 +108,7 @@ namespace rambler { namespace XMPP { namespace Core {
 
     void XMLStream::close()
     {
-        state = Stream::State::Closing;
+        state = Stream::State::Closed;
 
         if (connection) {
             sendData("</stream>");
@@ -117,8 +117,6 @@ namespace rambler { namespace XMPP { namespace Core {
 
         parser = nullptr;
         context = nullptr;
-
-        state = Stream::State::Closed;
     }
 
     void XMLStream::secure()

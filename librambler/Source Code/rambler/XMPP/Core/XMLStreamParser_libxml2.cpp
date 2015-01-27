@@ -1,9 +1,9 @@
-/**********************************************************************************************************************
+/**************************************************************************************************
  * @file    rambler/XMPP/Core/XMLStreamParser_libxml2.cpp
- * @date    2014-12-17
+ * @date    2015-01-27
  * @brief   <# Brief Description#>
  * @details <#Detailed Description#>
- **********************************************************************************************************************/
+ **************************************************************************************************/
 
 #include "rambler/XMPP/Core/XMLStreamParser_libxml2.hpp"
 #include "rambler/XMPP/Core/XMLStream.hpp"
@@ -23,17 +23,21 @@ namespace rambler { namespace XMPP { namespace Core {
         saxHandler->startElementNs = &XMLStreamParser_libxml2::handleElementStarted;
         saxHandler->endElementNs = &XMLStreamParser_libxml2::handleElementEnded;
         saxHandler->characters = &XMLStreamParser_libxml2::handleText;
+
+        parserContext = xmlCreatePushParserCtxt(saxHandler, reinterpret_cast<void *>(this), nullptr, 0, nullptr);
     }
 
     XMLStreamParser_libxml2::~XMLStreamParser_libxml2()
     {
+        xmlFreeParserCtxt(parserContext);
         delete saxHandler;
     }
 
     void XMLStreamParser_libxml2::parse(String data)
     {
-        auto self = shared_from_this();
-        xmlSAXUserParseMemory(saxHandler, reinterpret_cast<void *>(&self), data.c_str(), data.length());
+        auto holdMe = shared_from_this();
+
+        xmlParseChunk(parserContext, data.c_str(), data.length(), 0);
     }
 
     void XMLStreamParser_libxml2::handleElementStarted(void * ctx,
@@ -46,8 +50,8 @@ namespace rambler { namespace XMPP { namespace Core {
                                                  int numberOfDefaultedAttributes,
                                                  const xmlChar ** attributes)
     {
-        /* ctx is always a strong pointer to Parser */
-        StrongPointer<XMLStreamParser_libxml2> parser = *reinterpret_cast<StrongPointer<XMLStreamParser_libxml2> *>(ctx);
+        /* ctx is always a pointer to Parser */
+        XMLStreamParser_libxml2 *parser = reinterpret_cast<XMLStreamParser_libxml2 *>(ctx);
         if (parser == nullptr) {
             return;
         }
@@ -144,7 +148,6 @@ namespace rambler { namespace XMPP { namespace Core {
         }
 
         parser->currentElement = element;
-
     }
 
     void XMLStreamParser_libxml2::handleElementEnded(void * ctx,
@@ -152,8 +155,8 @@ namespace rambler { namespace XMPP { namespace Core {
                                                const xmlChar * prefix,
                                                const xmlChar * URI)
     {
-        /* ctx is always a strong pointer to Parser */
-        StrongPointer<XMLStreamParser_libxml2> parser = *reinterpret_cast<StrongPointer<XMLStreamParser_libxml2> *>(ctx);
+        /* ctx is always a pointer to Parser */
+        XMLStreamParser_libxml2 *parser = reinterpret_cast<XMLStreamParser_libxml2 *>(ctx);
         if (parser == nullptr) {
             return;
         }
@@ -163,9 +166,10 @@ namespace rambler { namespace XMPP { namespace Core {
         if (parser->depth < 0) {
             parser->stream.lock()->close();
         } else if (parser->depth == 0) {
-			parser->stream.lock()->handleReceivedXMLElementEvent(parser->topElement);
+            auto temp = parser->topElement;
 			parser->topElement = nullptr;
 			parser->currentElement = parser->currentElement->getParent();
+            parser->stream.lock()->handleReceivedXMLElementEvent(temp);
         } else {
             parser->currentElement = parser->currentElement->getParent();
         }
@@ -173,8 +177,8 @@ namespace rambler { namespace XMPP { namespace Core {
 
     void XMLStreamParser_libxml2::handleText(void *ctx, const xmlChar *ch, int len)
     {
-        /* ctx is always a strong pointer to Parser */
-        StrongPointer<XMLStreamParser_libxml2> parser = *reinterpret_cast<StrongPointer<XMLStreamParser_libxml2> *>(ctx);
+        /* ctx is always a pointer to Parser */
+        XMLStreamParser_libxml2 *parser = reinterpret_cast<XMLStreamParser_libxml2 *>(ctx);
         if (parser == nullptr) {
             return;
         }
@@ -185,6 +189,5 @@ namespace rambler { namespace XMPP { namespace Core {
             parser->currentElement->addChild(textNode);
         }
     }
-
 
 }}}

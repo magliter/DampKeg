@@ -229,7 +229,7 @@ namespace rambler { namespace XMPP { namespace IM { namespace Client {
         running = true;
         xmlStream->open();
         if (runloop) {
-            while (xmlStream->getState() != Stream::State::Closed && xmlStream->getState() != Stream::State::Closing) {
+            while (xmlStream->getState() != Stream::State::Closed) {
                 runloop();
             }
         }
