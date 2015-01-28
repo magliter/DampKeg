@@ -64,17 +64,6 @@
       <UniqueIdentifier>{2547cc77-f066-4955-8e77-7a4be556dd46}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Source Code\rambler\Connection">
-      <UniqueIdentifier>{c5fae295-e44d-4f88-8d6f-de4e77c97615}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Code\rambler\Connection\Source Files">
-      <UniqueIdentifier>{0963642e-c376-4fdc-a4de-b81edcc88844}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Source Code\rambler\Connection\Header Files">
-      <UniqueIdentifier>{c51762d1-5b42-4b99-9ea9-f033abf03dd2}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Source Code\rambler\base64">
       <UniqueIdentifier>{fdb69eab-0750-4e73-95f8-f3a21c44a968}</UniqueIdentifier>
     </Filter>
@@ -95,13 +84,13 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="Source Code\rambler\memory">
+      <UniqueIdentifier>{1c6d76fd-bb84-440f-af86-e56953e42b3f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source Code\windows\librambler.cpp">
       <Filter>Source Code\windows\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Code\rambler\Connection\TCPConnection.cpp">
-      <Filter>Source Code\rambler\Connection\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source Code\rambler\XMPP\Core\JID.cpp">
       <Filter>Source Code\rambler\XMPP\Core\Source Files</Filter>
@@ -110,9 +99,6 @@
       <Filter>Source Code\rambler\XMPP\Core\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source Code\rambler\XMPP\Core\XMLStream_Constants.cpp">
-      <Filter>Source Code\rambler\XMPP\Core\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Code\rambler\XMPP\Core\XMLStream_Context.cpp">
       <Filter>Source Code\rambler\XMPP\Core\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source Code\rambler\XMPP\IM\Client\Client.cpp">
@@ -154,9 +140,6 @@
     <ClCompile Include="Source Code\rambler\XMPP\Core\XMLStreamParser_libxml2.cpp">
       <Filter>Source Code\rambler\XMPP\Core\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source Code\rambler\Connection\Winsock2BasedTCPConnection.cpp">
-      <Filter>Source Code\rambler\Connection\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source Code\rambler\XMPP\IM\Message.cpp">
       <Filter>Source Code\rambler\XMPP\IM\Client\Source Files</Filter>
     </ClCompile>
@@ -165,6 +148,18 @@
     </ClCompile>
     <ClCompile Include="Source Code\rambler\XMPP\IM\Presence.cpp">
       <Filter>Source Code\rambler\XMPP\IM\Client\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\rambler\Stream\TCPStream_Winsock2.cpp">
+      <Filter>Source Code\rambler\Stream\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\rambler\Stream\TCPStream.cpp">
+      <Filter>Source Code\rambler\Stream\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\rambler\memory\shared_memory.cpp">
+      <Filter>Source Code\rambler\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\rambler\memory\MemoryManager_generic.cpp">
+      <Filter>Source Code\rambler\memory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -243,17 +238,8 @@
     <ClInclude Include="Source Code\rambler\XMPP\Core\XMLStreamParser_libxml2.hpp">
       <Filter>Source Code\rambler\XMPP\Core\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source Code\rambler\Connection\Winsock2BasedTCPConnection.hpp">
-      <Filter>Source Code\rambler\Connection\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Source Code\rambler\rambler.hpp">
       <Filter>Source Code</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\rambler\Connection\SecureUtilities.hpp">
-      <Filter>Source Code\rambler\Connection\Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\rambler\Connection\TCPConnection.hpp">
-      <Filter>Source Code\rambler\Connection\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source Code\rambler\XMPP\IM\Message.hpp">
       <Filter>Source Code\rambler\XMPP\IM\Client\Header Files</Filter>
@@ -263,6 +249,27 @@
     </ClInclude>
     <ClInclude Include="Source Code\rambler\XMPP\IM\Presence.hpp">
       <Filter>Source Code\rambler\XMPP\IM\Client\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\rambler\Stream\TCPStream_Winsock2.hpp">
+      <Filter>Source Code\rambler\Stream\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\rambler\Stream\TCPStream.hpp">
+      <Filter>Source Code\rambler\Stream\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\rambler\memory\MemoryManager.hpp">
+      <Filter>Source Code\rambler\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\rambler\memory\shared_memory.h">
+      <Filter>Source Code\rambler\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\rambler\memory\SharedMemoryAllocator.hpp">
+      <Filter>Source Code\rambler\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\rambler\memory\StrongPointer.hpp">
+      <Filter>Source Code\rambler\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\rambler\memory\MemoryManager_generic.hpp">
+      <Filter>Source Code\rambler\memory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

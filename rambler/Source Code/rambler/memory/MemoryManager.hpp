@@ -1,20 +1,18 @@
 /**************************************************************************************************
  * @file    rambler/memory/MemoryManager.hpp
- * @date    2014-12-13
+ * @date    2015-01-28
  * @author  Omar Stefan Evans
  **************************************************************************************************/
 
 #pragma once
-
-#include <atomic>
-#include <mutex>
-#include <unordered_map>
 
 namespace rambler { namespace memory {
 
     class MemoryManager {
     public:
         static MemoryManager * default_manager();
+
+		virtual ~MemoryManager() = default;
 
         /**
          * Reserves a region of shared memory large enough to hold n objects
@@ -28,7 +26,7 @@ namespace rambler { namespace memory {
          * @see    release_memory
          * @see    share_memory
          */
-        void * reserve_memory(size_t n, size_t size);
+        virtual void * reserve_memory(size_t n, size_t size) = 0;
 
         /**
          * Reserves a region of shared memory large enough the amount of bytes
@@ -40,7 +38,7 @@ namespace rambler { namespace memory {
          * @see    release_memory
          * @see    share_memory
          */
-        void * reserve_memory(size_t amount);
+        virtual void * reserve_memory(size_t amount) = 0;
 
         /**
          * Releases the shared memory pointed to by ptr.
@@ -50,7 +48,7 @@ namespace rambler { namespace memory {
          * @post  The memory pointed to by ptr will have been released,
          *        and freed if nothing else is sharing it.
          */
-        void release_memory(void * ptr);
+        virtual void release_memory(void * ptr) = 0;
 
         /**
          * Shares the memory pointed to by ptr.
@@ -59,11 +57,7 @@ namespace rambler { namespace memory {
          * @param ptr the memory to share
          * @post  The memory pointed to by ptr will be shared.
          */
-        void share_memory(void * ptr);
-    private:
-        void free_memory(void * ptr);
+        virtual void share_memory(void * ptr) = 0;
 
-        std::unordered_map<void *, std::atomic<size_t>> ref_count;
-        std::mutex mutex; /* Use shared_timed_mutex when it becomes available. */
     };
 }}
