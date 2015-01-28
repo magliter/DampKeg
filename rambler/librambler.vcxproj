@@ -12,8 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source Code\rambler\base64\base64.cpp" />
-    <ClCompile Include="Source Code\rambler\Connection\TCPConnection.cpp" />
-    <ClCompile Include="Source Code\rambler\Connection\Winsock2BasedTCPConnection.cpp" />
+    <ClCompile Include="Source Code\rambler\memory\MemoryManager_generic.cpp" />
+    <ClCompile Include="Source Code\rambler\memory\shared_memory.cpp" />
+    <ClCompile Include="Source Code\rambler\Stream\TCPStream.cpp" />
+    <ClCompile Include="Source Code\rambler\Stream\TCPStream_Winsock2.cpp" />
     <ClCompile Include="Source Code\rambler\timestamp\timestamp_win32.cpp" />
     <ClCompile Include="Source Code\rambler\uuid\uuid_win32.cpp" />
     <ClCompile Include="Source Code\rambler\XML\Attribute.cpp" />
@@ -27,7 +29,6 @@
     <ClCompile Include="Source Code\rambler\XMPP\Core\XMLStream.cpp" />
     <ClCompile Include="Source Code\rambler\XMPP\Core\XMLStreamParser_libxml2.cpp" />
     <ClCompile Include="Source Code\rambler\XMPP\Core\XMLStream_Constants.cpp" />
-    <ClCompile Include="Source Code\rambler\XMPP\Core\XMLStream_Context.cpp" />
     <ClCompile Include="Source Code\rambler\XMPP\IM\Client\Client.cpp" />
     <ClCompile Include="Source Code\rambler\XMPP\IM\Message.cpp" />
     <ClCompile Include="Source Code\rambler\XMPP\IM\Presence.cpp" />
@@ -37,14 +38,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source Code\rambler\base64\base64.hpp" />
-    <ClInclude Include="Source Code\rambler\Connection\SecureUtilities.hpp" />
-    <ClInclude Include="Source Code\rambler\Connection\TCPConnection.hpp" />
-    <ClInclude Include="Source Code\rambler\Connection\Winsock2BasedTCPConnection.hpp" />
     <ClInclude Include="Source Code\rambler\integer_types.hpp" />
+    <ClInclude Include="Source Code\rambler\memory\MemoryManager.hpp" />
+    <ClInclude Include="Source Code\rambler\memory\MemoryManager_generic.hpp" />
+    <ClInclude Include="Source Code\rambler\memory\SharedMemoryAllocator.hpp" />
+    <ClInclude Include="Source Code\rambler\memory\shared_memory.h" />
+    <ClInclude Include="Source Code\rambler\memory\StrongPointer.hpp" />
     <ClInclude Include="Source Code\rambler\pointer_types.hpp" />
     <ClInclude Include="Source Code\rambler\rambler.hpp" />
     <ClInclude Include="Source Code\rambler\Stream\BidirectionalStream.hpp" />
     <ClInclude Include="Source Code\rambler\Stream\State.hpp" />
+    <ClInclude Include="Source Code\rambler\Stream\TCPStream.hpp" />
+    <ClInclude Include="Source Code\rambler\Stream\TCPStream_Winsock2.hpp" />
     <ClInclude Include="Source Code\rambler\string_types.hpp" />
     <ClInclude Include="Source Code\rambler\timestamp\timestamp.hpp" />
     <ClInclude Include="Source Code\rambler\types.hpp" />
@@ -121,7 +126,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)librambler\Source Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)rambler\Source Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PreprocessorDefinitions>BUILDING_LIBRARY_LIBRAMBLER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -140,7 +145,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)librambler\Source Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)rambler\Source Code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PreprocessorDefinitions>BUILDING_LIBRARY_LIBRAMBLER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
