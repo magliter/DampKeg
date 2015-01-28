@@ -37,7 +37,8 @@ namespace rambler { namespace XMPP { namespace Core {
     {
         auto holdMe = shared_from_this();
 
-        xmlParseChunk(parserContext, data.c_str(), data.length(), 0);
+        //FIXME: call multiple times if length is bigger than INT_MAX for some reason (it shouldn't be)
+        xmlParseChunk(parserContext, data.c_str(), (int)data.length(), 0);
     }
 
     void XMLStreamParser_libxml2::handleElementStarted(void * ctx,

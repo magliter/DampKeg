@@ -16,8 +16,6 @@
 		0735E0FF197474D700AE5136 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735E0FB197474D700AE5136 /* main.swift */; };
 		0735E100197474D700AE5136 /* PlainAuthenticationCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735E0FC197474D700AE5136 /* PlainAuthenticationCredentials.swift */; };
 		0735E1081974760000AE5136 /* Damp_KegTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735E106197475A600AE5136 /* Damp_KegTests.swift */; };
-		073D2F361A414E3800E76071 /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E121A40A69200DF46CE /* Rambler.framework */; };
-		073D2F371A414E3800E76071 /* Rambler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE4E121A40A69200DF46CE /* Rambler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07746CE119870D2F00B27FFA /* AddContactWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07746CE019870D2F00B27FFA /* AddContactWindowController.swift */; };
 		07746CE4198713C400B27FFA /* SubscriptionRequestWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07746CE2198713C400B27FFA /* SubscriptionRequestWindow.xib */; };
 		07746CE61987175600B27FFA /* SubscriptionRequestWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07746CE51987175600B27FFA /* SubscriptionRequestWindowController.swift */; };
@@ -54,42 +52,35 @@
 			remoteGlobalIDString = 0735E0B51974732000AE5136;
 			remoteInfo = DampKeg;
 		};
-		073D2F321A414E3800E76071 /* PBXContainerItemProxy */ = {
+		074462F41A788E3F00F7021A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07D1E6CF1950A833008C76CF;
+			remoteInfo = "Rambler (OS X)";
+		};
+		074462F61A788E3F00F7021A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07D1E6DA1950A833008C76CF;
+			remoteInfo = "Rambler – Tests (OS X)";
+		};
+		074462F81A788E3F00F7021A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 07DE4E2D1A40ADBE00DF46CE;
 			remoteInfo = "Rambler (iOS)";
 		};
-		073D2F341A414E3800E76071 /* PBXContainerItemProxy */ = {
+		074462FA1A788E3F00F7021A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 07DE4E371A40ADBE00DF46CE;
 			remoteInfo = "Rambler – Tests (iOS)";
 		};
-		073D2F381A414E3800E76071 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 07D1E6CE1950A833008C76CF;
-			remoteInfo = "Rambler (OS X)";
-		};
-		07DE4E111A40A69200DF46CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07D1E6CF1950A833008C76CF;
-			remoteInfo = Rambler;
-		};
-		07DE4E131A40A69200DF46CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 07D1E6DA1950A833008C76CF;
-			remoteInfo = "Rambler – Tests";
-		};
-		07DE4E151A40A69200DF46CE /* PBXContainerItemProxy */ = {
+		074462FC1A788E3F00F7021A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
 			proxyType = 2;
@@ -105,7 +96,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				073D2F371A414E3800E76071 /* Rambler.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,7 +116,7 @@
 		0735E0FC197474D700AE5136 /* PlainAuthenticationCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainAuthenticationCredentials.swift; sourceTree = "<group>"; };
 		0735E1041974758900AE5136 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0735E106197475A600AE5136 /* Damp_KegTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Damp_KegTests.swift; sourceTree = "<group>"; };
-		0735E10D197476A200AE5136 /* Rambler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rambler.xcodeproj; path = "../../../../Rambler Framework/Rambler.xcodeproj"; sourceTree = "<group>"; };
+		0735E10D197476A200AE5136 /* Rambler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rambler.xcodeproj; path = ../../../../rambler/Apple/Rambler.xcodeproj; sourceTree = "<group>"; };
 		07746CE019870D2F00B27FFA /* AddContactWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactWindowController.swift; sourceTree = "<group>"; };
 		07746CE3198713C400B27FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SubscriptionRequestWindow.xib; sourceTree = "<group>"; };
 		07746CE51987175600B27FFA /* SubscriptionRequestWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionRequestWindowController.swift; sourceTree = "<group>"; };
@@ -147,7 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				073D2F361A414E3800E76071 /* Rambler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +229,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		07DE4E0C1A40A69200DF46CE /* Products */ = {
+		074462ED1A788E3F00F7021A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07DE4E121A40A69200DF46CE /* Rambler.framework */,
-				07DE4E141A40A69200DF46CE /* Rambler – Tests (OS X).xctest */,
-				073D2F331A414E3800E76071 /* Rambler.framework */,
-				073D2F351A414E3800E76071 /* Rambler – Tests (iOS).xctest */,
-				07DE4E161A40A69200DF46CE /* Example Client (Objective-C) */,
+				074462F51A788E3F00F7021A /* Rambler.framework */,
+				074462F71A788E3F00F7021A /* Rambler – Tests (OS X).xctest */,
+				074462F91A788E3F00F7021A /* Rambler.framework */,
+				074462FB1A788E3F00F7021A /* Rambler – Tests (iOS).xctest */,
+				074462FD1A788E3F00F7021A /* Example Client (Objective-C) */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,7 +276,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				073D2F391A414E3800E76071 /* PBXTargetDependency */,
 			);
 			name = "DampKeg (Capstone)";
 			productName = DampKeg;
@@ -345,7 +333,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 07DE4E0C1A40A69200DF46CE /* Products */;
+					ProductGroup = 074462ED1A788E3F00F7021A /* Products */;
 					ProjectRef = 0735E10D197476A200AE5136 /* Rambler.xcodeproj */;
 				},
 			);
@@ -358,39 +346,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		073D2F331A414E3800E76071 /* Rambler.framework */ = {
+		074462F51A788E3F00F7021A /* Rambler.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Rambler.framework;
-			remoteRef = 073D2F321A414E3800E76071 /* PBXContainerItemProxy */;
+			remoteRef = 074462F41A788E3F00F7021A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		073D2F351A414E3800E76071 /* Rambler – Tests (iOS).xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Rambler – Tests (iOS).xctest";
-			remoteRef = 073D2F341A414E3800E76071 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07DE4E121A40A69200DF46CE /* Rambler.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Rambler.framework;
-			remoteRef = 07DE4E111A40A69200DF46CE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		07DE4E141A40A69200DF46CE /* Rambler – Tests (OS X).xctest */ = {
+		074462F71A788E3F00F7021A /* Rambler – Tests (OS X).xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Rambler – Tests (OS X).xctest";
-			remoteRef = 07DE4E131A40A69200DF46CE /* PBXContainerItemProxy */;
+			remoteRef = 074462F61A788E3F00F7021A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		07DE4E161A40A69200DF46CE /* Example Client (Objective-C) */ = {
+		074462F91A788E3F00F7021A /* Rambler.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rambler.framework;
+			remoteRef = 074462F81A788E3F00F7021A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		074462FB1A788E3F00F7021A /* Rambler – Tests (iOS).xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Rambler – Tests (iOS).xctest";
+			remoteRef = 074462FA1A788E3F00F7021A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		074462FD1A788E3F00F7021A /* Example Client (Objective-C) */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = "Example Client (Objective-C)";
-			remoteRef = 07DE4E151A40A69200DF46CE /* PBXContainerItemProxy */;
+			remoteRef = 074462FC1A788E3F00F7021A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -465,11 +453,6 @@
 			isa = PBXTargetDependency;
 			target = 0735E0B51974732000AE5136 /* DampKeg (Capstone) */;
 			targetProxy = 0735E10B1974760500AE5136 /* PBXContainerItemProxy */;
-		};
-		073D2F391A414E3800E76071 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Rambler (OS X)";
-			targetProxy = 073D2F381A414E3800E76071 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
