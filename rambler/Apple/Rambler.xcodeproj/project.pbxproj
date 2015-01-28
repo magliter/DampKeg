@@ -50,8 +50,6 @@
 		0744627A1A787F9C00F7021A /* SRVRecordResolver_CFNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 074462221A787F9C00F7021A /* SRVRecordResolver_CFNetwork.h */; };
 		0744627B1A787F9C00F7021A /* IntegerTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 074462231A787F9C00F7021A /* IntegerTypes.hpp */; };
 		0744627C1A787F9C00F7021A /* IntegerTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 074462231A787F9C00F7021A /* IntegerTypes.hpp */; };
-		0744627D1A787F9C00F7021A /* MemoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 074462251A787F9C00F7021A /* MemoryManager.cpp */; };
-		0744627E1A787F9C00F7021A /* MemoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 074462251A787F9C00F7021A /* MemoryManager.cpp */; };
 		0744627F1A787F9C00F7021A /* MemoryManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 074462261A787F9C00F7021A /* MemoryManager.hpp */; };
 		074462801A787F9C00F7021A /* MemoryManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 074462261A787F9C00F7021A /* MemoryManager.hpp */; };
 		074462811A787F9C00F7021A /* shared_memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 074462271A787F9C00F7021A /* shared_memory.cpp */; };
@@ -159,6 +157,8 @@
 		07461EC21974E7EC002B3DF3 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07461EC11974E7EC002B3DF3 /* main.mm */; };
 		07461EC81974E95F002B3DF3 /* Rambler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1E6CF1950A833008C76CF /* Rambler.framework */; };
 		07461ECE1974EB59002B3DF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1E6F01950A907008C76CF /* Foundation.framework */; };
+		075971011A799C0100886C94 /* MemoryManager_generic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075970FF1A799C0100886C94 /* MemoryManager_generic.cpp */; };
+		075971021A799C0100886C94 /* MemoryManager_generic.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075971001A799C0100886C94 /* MemoryManager_generic.hpp */; };
 		075B91551A3ABEB90032D908 /* JID.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91501A3ABEB90032D908 /* JID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075B91561A3ABEB90032D908 /* JID.internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 075B91511A3ABEB90032D908 /* JID.internal.h */; };
 		075B91571A3ABEB90032D908 /* JID.mm in Sources */ = {isa = PBXBuildFile; fileRef = 075B91521A3ABEB90032D908 /* JID.mm */; };
@@ -312,7 +312,6 @@
 		074462211A787F9C00F7021A /* SRVRecordResolver_CFNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRVRecordResolver_CFNetwork.cpp; sourceTree = "<group>"; };
 		074462221A787F9C00F7021A /* SRVRecordResolver_CFNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVRecordResolver_CFNetwork.h; sourceTree = "<group>"; };
 		074462231A787F9C00F7021A /* IntegerTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntegerTypes.hpp; sourceTree = "<group>"; };
-		074462251A787F9C00F7021A /* MemoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryManager.cpp; sourceTree = "<group>"; };
 		074462261A787F9C00F7021A /* MemoryManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoryManager.hpp; sourceTree = "<group>"; };
 		074462271A787F9C00F7021A /* shared_memory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shared_memory.cpp; sourceTree = "<group>"; };
 		074462281A787F9C00F7021A /* shared_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shared_memory.h; sourceTree = "<group>"; };
@@ -367,6 +366,8 @@
 		074462641A787F9C00F7021A /* SubscriptionState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SubscriptionState.hpp; sourceTree = "<group>"; };
 		07461EBF1974E7EC002B3DF3 /* Example Client (Objective-C) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Example Client (Objective-C)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07461EC11974E7EC002B3DF3 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		075970FF1A799C0100886C94 /* MemoryManager_generic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryManager_generic.cpp; sourceTree = "<group>"; };
+		075971001A799C0100886C94 /* MemoryManager_generic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoryManager_generic.hpp; sourceTree = "<group>"; };
 		075B91501A3ABEB90032D908 /* JID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JID.h; sourceTree = "<group>"; };
 		075B91511A3ABEB90032D908 /* JID.internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JID.internal.h; sourceTree = "<group>"; };
 		075B91521A3ABEB90032D908 /* JID.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JID.mm; sourceTree = "<group>"; };
@@ -526,8 +527,9 @@
 		074462241A787F9C00F7021A /* memory */ = {
 			isa = PBXGroup;
 			children = (
-				074462251A787F9C00F7021A /* MemoryManager.cpp */,
 				074462261A787F9C00F7021A /* MemoryManager.hpp */,
+				075970FF1A799C0100886C94 /* MemoryManager_generic.cpp */,
+				075971001A799C0100886C94 /* MemoryManager_generic.hpp */,
 				074462271A787F9C00F7021A /* shared_memory.cpp */,
 				074462281A787F9C00F7021A /* shared_memory.h */,
 				074462291A787F9C00F7021A /* SharedMemoryAllocator.hpp */,
@@ -918,6 +920,7 @@
 				074462B51A787F9C00F7021A /* NameableNode.hpp in Headers */,
 				074462DD1A787F9C00F7021A /* IQRequestType.hpp in Headers */,
 				074462BD1A787F9C00F7021A /* NamespaceableNode.hpp in Headers */,
+				075971021A799C0100886C94 /* MemoryManager_generic.hpp in Headers */,
 				0744628B1A787F9C00F7021A /* rambler.hpp in Headers */,
 				074462831A787F9C00F7021A /* shared_memory.h in Headers */,
 				07E761FE197B8A5700CD1BDE /* XMLNamespace.h in Headers */,
@@ -1246,7 +1249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0744627D1A787F9C00F7021A /* MemoryManager.cpp in Sources */,
 				074462CF1A787F9C00F7021A /* XMLStream_Constants.cpp in Sources */,
 				074462811A787F9C00F7021A /* shared_memory.cpp in Sources */,
 				074462BB1A787F9C00F7021A /* NamespaceableNode.cpp in Sources */,
@@ -1254,6 +1256,7 @@
 				074462B31A787F9C00F7021A /* NameableNode.cpp in Sources */,
 				07921C8B19861D09008FCA3B /* Presence.mm in Sources */,
 				074462AF1A787F9C00F7021A /* Element.cpp in Sources */,
+				075971011A799C0100886C94 /* MemoryManager_generic.cpp in Sources */,
 				0744629F1A787F9C00F7021A /* timestamp.mm in Sources */,
 				074462CB1A787F9C00F7021A /* XMLStream.cpp in Sources */,
 				074462AB1A787F9C00F7021A /* Attribute.cpp in Sources */,
@@ -1295,7 +1298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0744627E1A787F9C00F7021A /* MemoryManager.cpp in Sources */,
 				074462D01A787F9C00F7021A /* XMLStream_Constants.cpp in Sources */,
 				074462821A787F9C00F7021A /* shared_memory.cpp in Sources */,
 				074462BC1A787F9C00F7021A /* NamespaceableNode.cpp in Sources */,

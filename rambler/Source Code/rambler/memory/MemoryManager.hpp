@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <cstddef>
+
 namespace rambler { namespace memory {
 
     class MemoryManager {
