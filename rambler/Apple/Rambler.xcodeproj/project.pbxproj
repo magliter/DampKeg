@@ -740,8 +740,8 @@
 		07D1E6C51950A833008C76CF = {
 			isa = PBXGroup;
 			children = (
-				074462141A787F9C00F7021A /* rambler */,
 				071A76941A40B948006B41A8 /* Rambler */,
+				074462141A787F9C00F7021A /* rambler */,
 				07461EC01974E7EC002B3DF3 /* Example Client (Objective-C) */,
 				07D1E6F21950A913008C76CF /* Frameworks */,
 				07D1E6D01950A833008C76CF /* Products */,
