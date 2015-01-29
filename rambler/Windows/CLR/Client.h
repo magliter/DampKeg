@@ -6,17 +6,18 @@
 
 using namespace System;
 
-//namespace rambler { namespace XMPP { namespace IM { namespace Client {
-//	class Client;
-//}}}}
-
 namespace Rambler {
 	namespace XMPP {
 		namespace IM {
 			namespace Client {
 				public ref class Client
 				{
-					// TODO: Add your methods for this class here.
+				public:
+					Client(System::String^ username);
+					~Client();
+
+					void start();
+
 				private:
 					rambler::XMPP::IM::Client::Client *client;
 				};
