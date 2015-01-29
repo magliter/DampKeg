@@ -13,6 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\XMPP">
+      <UniqueIdentifier>{69b3231a-5fcc-4bee-9312-e6cbd7e315fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stream">
+      <UniqueIdentifier>{7ede80be-522a-4ec4-bcbf-25609639c26a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stream\Header Files">
+      <UniqueIdentifier>{dad0cf4f-caa8-4cf6-8269-7e46b2305b0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stream\Source Files">
+      <UniqueIdentifier>{9ffd8dcd-940d-4ec3-800c-98ad8de9a978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\XMPP\Core">
+      <UniqueIdentifier>{ddfcd405-05ba-4fb4-b71b-a38e861d3f29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\XMPP\Core\Header Files">
+      <UniqueIdentifier>{c9abe17d-8731-4728-8f84-5cc1c06c4654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\XMPP\Core\Source Files">
+      <UniqueIdentifier>{17215042-9387-4c9a-8ae4-584d3999daf8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stdafx.h">
@@ -27,6 +48,15 @@
     <ClInclude Include="utilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Stream\State.hpp">
+      <Filter>Source Files\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="Stream\TCPStream.hpp">
+      <Filter>Source Files\Stream\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XMPP\Core\JID.h">
+      <Filter>Source Files\XMPP\Core\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -40,6 +70,12 @@
     </ClCompile>
     <ClCompile Include="utilities.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stream\TCPStream.cpp">
+      <Filter>Source Files\Stream\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XMPP\Core\JID.cpp">
+      <Filter>Source Files\XMPP\Core\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

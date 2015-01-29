@@ -1,4 +1,5 @@
 //2015-01-28
+//Client class to wrap native client
 
 #pragma once
 

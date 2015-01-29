@@ -88,7 +88,10 @@
     <ClInclude Include="Client.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="Stream\State.hpp" />
+    <ClInclude Include="Stream\TCPStream.hpp" />
     <ClInclude Include="utilities.h" />
+    <ClInclude Include="XMPP\Core\JID.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -97,7 +100,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Stream\TCPStream.cpp" />
     <ClCompile Include="utilities.cpp" />
+    <ClCompile Include="XMPP\Core\JID.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
